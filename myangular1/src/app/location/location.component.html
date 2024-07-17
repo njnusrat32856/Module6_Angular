@@ -1,0 +1,30 @@
+
+
+<div class="container">
+    <p>location works!</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Photo</th>
+                <th>Unit</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let location of locations | async">
+                <td>{{location.name}}</td>
+                <td>{{location.city}}</td>
+                <td>{{location.state}}</td>
+                <td><img [src]="location.photo" alt="{{location.name}}" style="width: 50px; height: auto;"></td>
+                <td>{{location.availableUnits}}</td>
+                <td>
+                    <button class="btn btn-warning m-1" (click)="updateLocation(location.id)">Edit</button>
+                    <button class="btn btn-danger m-1" (click)="deleteLocation(location.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
