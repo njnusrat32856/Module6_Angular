@@ -1,6 +1,4 @@
-
-
-<div class="container">
+<!-- <div class="container">
     <p>viewstudent works!</p>
     <table class="table table-striped">
         <thead>
@@ -25,4 +23,25 @@
             </tr>
         </tbody>
     </table>
+</div> -->
+
+<div class="container">
+    <h2>Student List</h2>
+
+    <ul class="list-group">
+        <li *ngFor="let student of students" class="list-group-item d-flex justify-content-between align-item-center">
+            <div>
+                <strong>Name: {{student.name}}</strong> , Email: {{student.email}}
+                <div class="container">
+                    <em>Location: </em> {{student.location.name}}, {{student.location.city}}
+                    <br>
+                    <em>Cell No: </em> {{student.cellNo}}
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-warning m-1">Edit</button>
+                <button class="btn btn-danger m-1">Delete</button>
+            </div>
+        </li>
+    </ul>
 </div>

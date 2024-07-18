@@ -114,6 +114,22 @@
       "email": "raju@gmail.com",
       "cellNo": "545345",
       "location": "Homesteady Housing"
+    },
+    {
+      "id": "9e5d",
+      "name": "Rezvi",
+      "email": "rezvi@gmail.com",
+      "cellNo": "78773",
+      "location": {
+        "id": "4",
+        "name": "Happy Homes Group",
+        "city": "qqq",
+        "state": "IN",
+        "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
+        "availableUnits": 1,
+        "wifi": true,
+        "laundry": false
+      }
     }
   ]
 }

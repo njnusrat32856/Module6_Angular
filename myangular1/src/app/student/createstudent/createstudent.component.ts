@@ -44,6 +44,14 @@ export class CreatestudentComponent implements OnInit{
         laundry: [undefined]
       })
     });
+
+    this.studentForm.get('location')?.get('name')?.valueChanges
+      .subscribe(name =>{
+        const selectedLocation = this.locations.find(loc => loc.name === name);
+        if (selectedLocation) {
+          this.studentForm.patchValue({ location: selectedLocation});
+        }
+      });
   }
 
   loadLocation() {
