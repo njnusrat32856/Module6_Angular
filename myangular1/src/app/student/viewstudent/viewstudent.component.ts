@@ -11,8 +11,8 @@ import { forkJoin } from 'rxjs';
   templateUrl: './viewstudent.component.html',
   styleUrl: './viewstudent.component.css'
 })
-export class ViewstudentComponent implements OnInit{
-  
+export class ViewstudentComponent implements OnInit {
+
   students: StudentModel[] = [];
   locations: Location[] = [];
 
@@ -20,8 +20,8 @@ export class ViewstudentComponent implements OnInit{
     private studentService: StudentserviceService,
     private locationService: LocationService,
     private router: Router
-  ) {}
-  
+  ) { }
+
   ngOnInit(): void {
     this.loadData();
   }
@@ -31,7 +31,7 @@ export class ViewstudentComponent implements OnInit{
       locations: this.locationService.getLocationForStudent(),
       students: this.studentService.viewAllStudent()
     }).subscribe({
-      next: ({ locations, students }) =>{
+      next: ({ locations, students }) => {
         this.locations = locations;
         this.students = students;
       },
@@ -41,5 +41,21 @@ export class ViewstudentComponent implements OnInit{
     });
   }
 
+  deleteStudent(studentId: string): void {
+    this.studentService.deleteStudent(studentId)
+      .subscribe({
+        next: res => {
+          this.loadData(); // Refresh the list after deletion
+        },
+        error: err => {
+          console.log(err);
+        }
+      });
+  }
+
+  editStudent(student: StudentModel): void{
+    // Navigate to the edit student component with the student's ID
+    this.router.navigate(['/updatestudent', student.id]);
+  }
 
 }

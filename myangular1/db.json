@@ -89,46 +89,65 @@
       "availableUnits": 6,
       "wifi": true,
       "laundry": true
+    },
+    {
+      "id": "37ae",
+      "name": "Mirpur",
+      "city": "Dhaka",
+      "state": "DK",
+      "photo": "https://www.google.com/imgres?q=mirpur%20dhaka&imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D100071009973059&imgrefurl=https%3A%2F%2Fwww.facebook.com%2FMirpur.Dhaka.BD%2F&docid=zcAbY5-dtXn9RM&tbnid=PA7DYBq8lDRw5M&vet=12ahUKEwi-p9fyj8KHAxUB_6ACHTDWAdEQM3oECGcQAA..i&w=1898&h=1898&hcb=2&ved=2ahUKEwi-p9fyj8KHAxUB_6ACHTDWAdEQM3oECGcQAA",
+      "availableUnits": "10",
+      "wifi": true,
+      "laundry": false
     }
   ],
   "student": [
     {
-      "id": "1",
-      "name": "Nusrat",
-      "email": "nusrat@gmail.com",
-      "cellNo": "23545",
+      "id": "c324",
+      "name": "Raju  Ahmed",
+      "email": "raju@gmail.com",
+      "cellNo": "545345",
       "location": {
-        "id": "1",
-        "name": "A113 Transitional Housing",
-        "city": "Santa Monica",
-        "state": "fghh",
-        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-        "availableUnits": "4",
-        "wifi": false,
+        "id": "9",
+        "name": "Capital Safe Towns",
+        "city": "Portland",
+        "state": "OR",
+        "photo": "https://angular.io/assets/images/tutorials/faa/webaliser-_TPTXZd9mOo-unsplash.jpg",
+        "availableUnits": 6,
+        "wifi": true,
         "laundry": true
       }
     },
     {
-      "id": "c324",
-      "name": "Raju ",
-      "email": "raju@gmail.com",
-      "cellNo": "545345",
-      "location": "Homesteady Housing"
-    },
-    {
       "id": "9e5d",
-      "name": "Rezvi",
+      "name": "Mostofa Rezvi",
       "email": "rezvi@gmail.com",
       "cellNo": "78773",
       "location": {
-        "id": "4",
-        "name": "Happy Homes Group",
-        "city": "qqq",
-        "state": "IN",
-        "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
+        "id": "2",
+        "name": "Warm Beds Housing Support",
+        "city": "Juneau",
+        "state": "AK",
+        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
         "availableUnits": 1,
-        "wifi": true,
+        "wifi": false,
         "laundry": false
+      }
+    },
+    {
+      "id": "07f0",
+      "name": "Nusrat Jahan",
+      "email": "n.j.naima222@gmail.com",
+      "cellNo": "01951300503",
+      "location": {
+        "id": "6",
+        "name": "Seriously Safe Towns",
+        "city": "Oakland",
+        "state": "CA",
+        "photo": "https://angular.io/assets/images/tutorials/faa/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
+        "availableUnits": 5,
+        "wifi": true,
+        "laundry": true
       }
     }
   ]

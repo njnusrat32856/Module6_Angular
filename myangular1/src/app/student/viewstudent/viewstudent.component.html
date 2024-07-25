@@ -26,7 +26,7 @@
 </div> -->
 
 <div class="container">
-    <h2>Student List</h2>
+    <h2 class="student-list">Student List</h2>
 
     <ul class="list-group">
         <li *ngFor="let student of students" class="list-group-item d-flex justify-content-between align-item-center">
@@ -39,8 +39,8 @@
                 </div>
             </div>
             <div>
-                <button class="btn btn-warning m-1">Edit</button>
-                <button class="btn btn-danger m-1">Delete</button>
+                <button class="btn btn-warning m-1" (click)="editStudent(student)">Edit</button>
+                <button class="btn btn-danger m-1" (click)="deleteStudent(student.id)">Delete</button>
             </div>
         </li>
     </ul>

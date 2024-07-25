@@ -22,7 +22,18 @@ export class StudentserviceService {
     return this.http.post<StudentModel>(this.baseUrl, student);
   }
 
-  // deleteStudent(studentId: string): Observable<void>{
-  //   return this.http.delete<void>(`${this.baseUrl}${this.studentId}`);
-  // }
+  deleteStudent(studentId: string): Observable<void>{
+    return this.http.delete<void>(`${this.baseUrl}${studentId}`);
+    // return this.http.delete<void>(this.baseUrl+studentId);
+  }
+
+  getStudentById(studentId: string): Observable<StudentModel>{
+    const url = `${this.baseUrl}${studentId}`;
+    return this.http.get<StudentModel>(url);
+  }
+
+  updateStudent(student: StudentModel): Observable<StudentModel>{
+    const url = `${this.baseUrl}${student.id}`;
+    return this.http.put<StudentModel>(url, student);
+  }
 }
