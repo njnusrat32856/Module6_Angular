@@ -1,0 +1,10 @@
+.table{
+    table-layout: auto;
+
+}
+h2{
+    text-align: center;
+    /* margin: 400;
+    padding: 400; */
+    color: rgb(144, 0, 255);
+}

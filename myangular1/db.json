@@ -1,4 +1,13 @@
 {
+  "user":[
+    {
+      "id": 1,
+      "name":"Raju  Ahmed",
+      "email":"raju@gmail.com",
+      "password": "12345"
+    }
+  ],
+
   "locations": [
     {
       "id": "1",
@@ -99,6 +108,16 @@
       "availableUnits": "10",
       "wifi": true,
       "laundry": false
+    },
+    {
+      "id": "e79b",
+      "name": "Dhanmondi",
+      "city": "Dhaka",
+      "state": "DK",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvWX7CKinfe6V5F1QwmSeeg7gWjBnHhKXebw&s",
+      "availableUnits": "4",
+      "wifi": true,
+      "laundry": true
     }
   ],
   "student": [
@@ -108,12 +127,12 @@
       "email": "raju@gmail.com",
       "cellNo": "545345",
       "location": {
-        "id": "9",
-        "name": "Capital Safe Towns",
-        "city": "Portland",
-        "state": "OR",
-        "photo": "https://angular.io/assets/images/tutorials/faa/webaliser-_TPTXZd9mOo-unsplash.jpg",
-        "availableUnits": 6,
+        "id": "e79b",
+        "name": "Dhanmondi",
+        "city": "Dhaka",
+        "state": "DK",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvWX7CKinfe6V5F1QwmSeeg7gWjBnHhKXebw&s",
+        "availableUnits": "4",
         "wifi": true,
         "laundry": true
       }
@@ -139,6 +158,22 @@
       "name": "Nusrat Jahan",
       "email": "n.j.naima222@gmail.com",
       "cellNo": "01951300503",
+      "location": {
+        "id": "6",
+        "name": "Seriously Safe Towns",
+        "city": "Oakland",
+        "state": "CA",
+        "photo": "https://angular.io/assets/images/tutorials/faa/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
+        "availableUnits": 5,
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "4a97",
+      "name": "Shamima ",
+      "email": "shamima@gmail.com",
+      "cellNo": "98040328",
       "location": {
         "id": "6",
         "name": "Seriously Safe Towns",
