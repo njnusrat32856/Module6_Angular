@@ -15,6 +15,9 @@ import { ViewstudentComponent } from './student/viewstudent/viewstudent.componen
 import { RouterModule } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { LogoutComponent } from './logout/logout.component';
+import { IMAGE_CONFIG, NgOptimizedImage } from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { LoginComponent } from './login/login.component';
     UpdatestudentComponent,
     ViewstudentComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    LogoutComponent
   ],
   imports: [
     
@@ -35,9 +40,14 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   providers: [
+    // provide: IMAGE_CONFIG,
+    // useValue: {
+    //   placeholderResolution: 40
+    // },
     provideClientHydration(),
     provideHttpClient(
       withFetch()

@@ -1,13 +1,18 @@
 {
-  "user":[
+  "user": [
     {
-      "id": 1,
-      "name":"Raju  Ahmed",
-      "email":"raju@gmail.com",
+      "id": "1",
+      "name": "Raju  Ahmed",
+      "email": "raju@gmail.com",
       "password": "12345"
+    },
+    {
+      "id": "c6de",
+      "name": "Nusrat Naima",
+      "email": "n.j.naima222@gmail.com",
+      "password": "1233"
     }
   ],
-
   "locations": [
     {
       "id": "1",
