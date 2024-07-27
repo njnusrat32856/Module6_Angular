@@ -89,4 +89,8 @@ export class AuthService {
     const userProfile = localStorage.getItem('userProfile');
     return userProfile ? JSON.parse(userProfile) : null;
   }
+
+  home(): void{
+    this.http.get(this.baseUrl);
+  }
 }
