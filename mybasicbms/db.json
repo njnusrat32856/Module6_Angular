@@ -1,0 +1,33 @@
+{
+    "login": [
+        {
+            "email": "n.j.naima222@gmail.com",
+            "username": "naima",
+            "password": "12345"
+        }
+    ],
+    "account": [
+        {
+            "clientId": 1,
+            "username": "naima",
+            "email": "n.j.naima222@gmail.com",
+            "balance": 100,
+            "transaction": {
+                "id": 1,
+                "date": "",
+                "description": "",
+                "amount": 20,
+                "type": ""
+            }
+        }
+    ],
+    "transaction": [
+        {
+            "id": 1,
+            "date": "",
+            "description": "",
+            "amount": 20,
+            "type": ""
+        }
+    ]
+}

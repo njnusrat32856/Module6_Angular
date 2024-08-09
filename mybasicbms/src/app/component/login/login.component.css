@@ -1,0 +1,10 @@
+.card {
+    margin-top: 15px;
+    border: 1px solid blue;
+    width: 550px;
+    padding: 45px;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    background-image: url("https://i.pinimg.com/564x/59/66/f5/5966f5a38920da94482da90075bc02f2.jpg");
+}
