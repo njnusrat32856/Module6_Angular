@@ -43,8 +43,8 @@ export class HomeComponent implements OnInit{
     
 
     // Navigate to the login page after a delay
-    setTimeout(() => {
+    // setTimeout(() => {
       this.router.navigate(['/login']);
-    }, 20000); // Adjust the delay as needed
+    // }, 20000); // Adjust the delay as needed
   }
 }
