@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustomerDashboardComponent } from './customer/customer-dashboard/customer-dashboard.component';
 
 const routes: Routes = [
+  {
+    path: '**', redirectTo: 'cusdashboard', pathMatch: 'full'
+  },
   {path: 'cusdashboard', component: CustomerDashboardComponent}
 ];
 

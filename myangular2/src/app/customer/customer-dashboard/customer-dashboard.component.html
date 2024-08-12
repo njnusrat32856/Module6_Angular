@@ -39,10 +39,10 @@
 
 <div class="container">
     <div class="customer-dashboard">
-        <h2 *ngIf="accounts">Welcome, {{ accounts.username }}!</h2>
+        <h2 >Welcome, {{ accounts.username }}!</h2>
         <div class="account-info">
-          <p *ngIf="let acc of accounts |number">Account Number: {{ acc.accountNumber }}</p>
-          <p *ngIf="let acc of accounts |currency">Balance: {{ acc.balance }}</p>
+          <p *ngIf="accounts">Account Number: {{ accounts.accountNumber }}</p>
+          <p *ngIf="accounts">Balance: {{ accounts.balance  |currency }}</p>
         </div>
         <div class="actions">
           <button (click)="onViewTransactions()" class="btn btn-success">View Transactions</button>

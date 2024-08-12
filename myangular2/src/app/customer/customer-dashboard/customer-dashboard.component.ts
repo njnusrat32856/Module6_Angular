@@ -14,7 +14,7 @@ import { forkJoin } from 'rxjs';
 export class CustomerDashboardComponent implements OnInit{
 
 
-  accounts : AccountModel[] = [];
+  accounts : any;
   transactions: TransactionModel[] = [];
 
   constructor(
@@ -25,28 +25,31 @@ export class CustomerDashboardComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.loadData();
-    // this.accounts = this.accountService.getAccountBalance();
+    this.accounts = this.accountService.getAccountInfo();
+    
+
+    // this.loadData();
+    this.accounts = this.accountService.getAccountBalance();
     // this.accounts = this.accountService.getAccountInfo();
 
     // this.accountService.getAccountInfo().subscribe((account) => {
     //   this.account = account;
     // });
   }
-  loadData(): void {
-    forkJoin({
-      transactions: this.transactionService.getTransactionForAccount(),
-      accounts: this.accountService.getAccountInfo()
-    }).subscribe({
-      next: ({ transactions, accounts }) => {
-        this.transactions = transactions;
-        this.accounts = accounts;
-      },
-      error: err => {
-        console.log(err);
-      }
-    });
-  }
+  // loadData(): void {
+  //   forkJoin({
+  //     transactions: this.transactionService.getTransactionForAccount(),
+  //     accounts: this.accountService.getAccountInfo()
+  //   }).subscribe({
+  //     next: ({ transactions, accounts }) => {
+  //       this.transactions = transactions;
+  //       this.accounts = accounts;
+  //     },
+  //     error: err => {
+  //       console.log(err);
+  //     }
+  //   });
+  // }
 
   
   
