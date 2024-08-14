@@ -13,6 +13,8 @@ import { FooterComponent } from './home/footer/footer.component';
 import { UpdatestComponent } from './student/updatest/updatest.component';
 import { ViewstComponent } from './student/viewst/viewst.component';
 import { CreatestComponent } from './student/createst/createst.component';
+import { LoginComponent } from './reg-login/login/login.component';
+import { RegistrationComponent } from './reg-login/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CreatestComponent } from './student/createst/createst.component';
     FooterComponent,
     UpdatestComponent,
     ViewstComponent,
-    CreatestComponent
+    CreatestComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
