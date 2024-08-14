@@ -1,0 +1,47 @@
+<!-- <div class="container">
+    <p>viewstudent works!</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Cell</th>
+                <th>Location Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let st of students | async">
+                <td>{{st.name}}</td>
+                <td>{{st.email}}</td>
+                <td>{{st.cellNo}}</td>
+                <td>{{st.location.name}}</td>
+                <td>
+                    <button class="btn btn-warning m-1">Edit</button>
+                    <button class="btn btn-danger m-1">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<div class="container">
+    <h2 class="student-list">Student List</h2>
+
+    <ul class="list-group">
+        <li *ngFor="let student of students" class="list-group-item d-flex justify-content-between align-item-center">
+            <div>
+                <strong>Name: {{student.name}}</strong> , Email: {{student.email}}
+                <div class="container">
+                    <em>Location: </em> {{student.location.name}}, {{student.location.city}}
+                    <br>
+                    <em>Cell No: </em> {{student.cellNo}}
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-warning m-1" (click)="editStudent(student)">Edit</button>
+                <button class="btn btn-danger m-1" (click)="deleteStudent(student.id)">Delete</button>
+            </div>
+        </li>
+    </ul>
+</div>

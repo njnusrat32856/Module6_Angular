@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { HeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { UpdatestComponent } from './student/updatest/updatest.component';
+import { ViewstComponent } from './student/viewst/viewst.component';
+import { CreatestComponent } from './student/createst/createst.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { FooterComponent } from './home/footer/footer.component';
     CreateloComponent,
     UpdateloComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    UpdatestComponent,
+    ViewstComponent,
+    CreatestComponent
   ],
   imports: [
     BrowserModule,

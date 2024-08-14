@@ -35,6 +35,6 @@ export class ViewloComponent implements OnInit{
       });
   }
   updateLocation(id: string){
-    this.router.navigate(['/updatelocation', id]);
+    this.router.navigate(['/updatelo', id]);
   }
 }

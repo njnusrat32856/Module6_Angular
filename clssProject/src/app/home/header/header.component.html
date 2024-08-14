@@ -9,11 +9,19 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/createlocation">Add Location</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/location">Location</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Location
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/location">View Location</a></li>
+                        <li><a class="dropdown-item" href="/createlo">Create Location</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -22,7 +30,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/student">View Student</a></li>
-                        <li><a class="dropdown-item" href="/createstudent">Create Student</a></li>
+                        <li><a class="dropdown-item" href="/createst">Create Student</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
