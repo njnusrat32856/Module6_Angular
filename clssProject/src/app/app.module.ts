@@ -15,6 +15,8 @@ import { ViewstComponent } from './student/viewst/viewst.component';
 import { CreatestComponent } from './student/createst/createst.component';
 import { LoginComponent } from './reg-login/login/login.component';
 import { RegistrationComponent } from './reg-login/registration/registration.component';
+import { UserprofileComponent } from './home/userprofile/userprofile.component';
+import { LogoutComponent } from './reg-login/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { RegistrationComponent } from './reg-login/registration/registration.com
     ViewstComponent,
     CreatestComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    UserprofileComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
