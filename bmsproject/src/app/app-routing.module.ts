@@ -8,11 +8,11 @@ import { AuthGuard } from './registration/guard/authguard.guard';
 import { DashboardComponent } from './client/dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path: '**', redirectTo:'login', pathMatch: 'full'},
+  {path: '', redirectTo:'dashboard', pathMatch: 'full'},
   {path: 'reg', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent},
-  // {path: 'userprofile', component: UserprofileComponent, canActivate: [AuthGuard]},
+  {path: 'userprofile', component: UserprofileComponent, canActivate: [AuthGuard]},
   {path: 'dashboard', component: DashboardComponent}
 ];
 
