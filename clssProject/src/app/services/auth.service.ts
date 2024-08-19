@@ -1,8 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { UserModel } from '../model/user.model';
-import { catchError, map, Observable } from 'rxjs';
+import { BehaviorSubject, catchError, map, Observable } from 'rxjs';
 import { AuthResponse } from '../model/auth-response';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,25 @@ export class AuthService {
 
   private baseUrl: string = "http://localhost:3000/user";
 
+  private currentUserSubject: BehaviorSubject<UserModel | null>;
+  public currentUser$: Observable<UserModel | null>;
+
   constructor(
-    private http: HttpClient
-  ) { }
+    private http: HttpClient,
+    @Inject(PLATFORM_ID) private platformId: Object  // Injecting PLATFORM_ID to check if it's browser
+  ) {
+    const storedUser = this.isBrowser() ? JSON.parse(localStorage.getItem('currentUser') || 'null') : null;
+    this.currentUserSubject = new BehaviorSubject<UserModel | null>(storedUser);
+    this.currentUser$ = this.currentUserSubject.asObservable();
+  }
+
+  private isBrowser(): boolean {
+    return isPlatformBrowser(this.platformId);
+  }
+
+  public get currentUserValue(): UserModel | null {
+    return this.currentUserSubject.value;
+  }
 
   registration(user: UserModel): Observable<AuthResponse> {
 
@@ -62,18 +79,18 @@ export class AuthService {
     localStorage.removeItem('token');
   }
 
-  // getToken(): string | null {
-  //   return localStorage.getItem('token');
-  // }
-
-  getToken() {
-    if (typeof localStorage !== 'undefined') {
-      return localStorage.getItem('token');
-    }
-    return null;
+  getToken(): string | null {
+    return localStorage.getItem('token');
   }
 
-  removeUserDetails(){
+  // getToken() {
+  //   if (typeof localStorage !== 'undefined') {
+  //     return localStorage.getItem('token');
+  //   }
+  //   return null;
+  // }
+
+  removeUserDetails() {
     localStorage.clear();
 
   }

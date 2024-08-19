@@ -45,3 +45,5 @@ add the following path in app-routing.module.ts:
 
 ng generate guard guard/authguard --implements CanActivate,CanLoad --project mybasicbms
 
+Role Guard
+ng generate guard role --project=clssProject

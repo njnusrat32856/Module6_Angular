@@ -39,7 +39,7 @@ export class RegistrationComponent {
         next: (res) => {
           console.log('User registered successfully:', res);
           this.authService.storeToken(res.token);
-          this.router.navigate(['/']); // Navigate to a protected route after registration
+          this.router.navigate(['/login']); // Navigate to a protected route after registration
         },
         error: (err) => {
           console.error('Error registering user:', err);

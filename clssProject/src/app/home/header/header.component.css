@@ -1,0 +1,33 @@
+.navbar-nav .notifications {
+    inset: 8px -15px auto auto !important;
+    background-color: #ffffff;
+  }
+  
+  .navbar-nav .notifications .notification-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    transition: 0.3s;
+  }
+  
+  .navbar-nav .notifications .notification-item i {
+    margin: 0 20px 0 10px;
+    font-size: 24px;
+  }
+  
+  .navbar-nav .notifications .notification-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #000000;
+  }
+  
+  .navbar-nav .notifications .notification-item p {
+    font-size: 13px;
+    margin-bottom: 3px;
+    color: #000000;
+  }
+  
+  .navbar-nav .notifications .notification-item:hover {
+    background-color: #b6b6b6;
+  }

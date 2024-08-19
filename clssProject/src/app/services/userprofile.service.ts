@@ -20,8 +20,8 @@ export class UserprofileService {
     return of(this.authService.getUserProfileFromStorage());
   }
 
-  updateUserProfile(user: UserModel): Observable<UserModel> {
-    localStorage.setItem('userProfile', JSON.stringify(user));
-    return this.http.put<UserModel>(`${this.baseUrl}/${user.id}`, user);
-  }
+  // updateUserProfile(user: UserModel): Observable<UserModel> {
+  //   localStorage.setItem('userProfile', JSON.stringify(user));
+  //   return this.http.put<UserModel>(`${this.baseUrl}/${user.id}`, user);
+  // }
 }

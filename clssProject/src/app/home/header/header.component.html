@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">NavBar</a>
+        <a class="navbar-brand" href="#"><img src="../../../assets/img/logo.png" alt="">BMSBank</a>
         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/userprofile">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -40,6 +40,82 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">LogOut</a>
                 </li>
+
+                <!-- Start Notification Nav -->
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                      <i class="bi bi-bell"></i>
+                      <span class="badge bg-primary badge-number">4</span>
+                    </a><!-- End Notification Icon -->
+          
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                      <li class="dropdown-header">
+                        You have 4 new notifications
+                        <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+          
+                      <li class="notification-item">
+                        <i class="bi bi-exclamation-circle text-warning"></i>
+                        <div>
+                          <h4>Lorem Ipsum</h4>
+                          <p>Quae dolorem earum veritatis oditseno</p>
+                          <p>30 min. ago</p>
+                        </div>
+                      </li>
+          
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+          
+                      <li class="notification-item">
+                        <i class="bi bi-x-circle text-danger"></i>
+                        <div>
+                          <h4>Atque rerum nesciunt</h4>
+                          <p>Quae dolorem earum veritatis oditseno</p>
+                          <p>1 hr. ago</p>
+                        </div>
+                      </li>
+          
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+          
+                      <li class="notification-item">
+                        <i class="bi bi-check-circle text-success"></i>
+                        <div>
+                          <h4>Sit rerum fuga</h4>
+                          <p>Quae dolorem earum veritatis oditseno</p>
+                          <p>2 hrs. ago</p>
+                        </div>
+                      </li>
+          
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+          
+                      <li class="notification-item">
+                        <i class="bi bi-info-circle text-primary"></i>
+                        <div>
+                          <h4>Dicta reprehenderit</h4>
+                          <p>Quae dolorem earum veritatis oditseno</p>
+                          <p>4 hrs. ago</p>
+                        </div>
+                      </li>
+          
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li class="dropdown-footer">
+                        <a href="#">Show all notifications</a>
+                      </li>
+          
+                    </ul><!-- End Notification Dropdown Items -->
+          
+                  </li><!-- End Notification Nav -->
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

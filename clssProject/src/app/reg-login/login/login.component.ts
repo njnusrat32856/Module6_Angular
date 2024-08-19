@@ -10,6 +10,37 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
+  // loginForm!: FormGroup;
+
+  // constructor(
+  //   private authService: AuthService,
+  //   private router: Router,
+  //   private formBuilder: FormBuilder
+  // ) {
+
+  //   this.loginForm = this.formBuilder.group({
+  //     email: [''],
+  //     password: ['']
+  //   });
+  // }
+
+
+  // onSubmit(): void {
+  //   if (this.loginForm.valid) {
+  //     const credentials = this.loginForm.value;
+  //     this.authService.login(credentials).subscribe({
+  //       next: (res) => {
+  //         console.log('User logged in successfully:', res);
+  //         this.authService.storeToken(res.token);
+  //         this.router.navigate(['/userprofile']); 
+  //       },
+  //       error: (err) => {
+  //         console.error('Error logging in:', err);
+  //       }
+  //     });
+  //   }
+  // }
+
   loginForm!: FormGroup;
 
   constructor(
@@ -24,15 +55,17 @@ export class LoginComponent {
     });
   }
 
-
   onSubmit(): void {
     if (this.loginForm.valid) {
       const credentials = this.loginForm.value;
       this.authService.login(credentials).subscribe({
         next: (res) => {
           console.log('User logged in successfully:', res);
+
           this.authService.storeToken(res.token);
-          this.router.navigate(['userprofile']); // Navigate to a protected route after login
+          // const role = this.authService.getUserRole();
+          this.router.navigate(['/userprofile']);
+          // Navigate to a protected route after login
         },
         error: (err) => {
           console.error('Error logging in:', err);
@@ -40,4 +73,6 @@ export class LoginComponent {
       });
     }
   }
+
+
 }

@@ -4,19 +4,29 @@
       "id": "1",
       "name": "Nusrat Jahan",
       "email": "nusrat@gmail.com",
-      "password": "12345"
+      "password": "12345",
+      "role": "user"
     },
     {
       "id": "c6de",
       "name": "Nusrat Naima",
       "email": "n.j.naima222@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "role": "admin"
     },
     {
       "id": "04e3",
       "name": "Mostofa Rezvi",
       "email": "rezvi@gmail.com",
-      "password": "0987"
+      "password": "0987",
+      "role": "user"
+    },
+    {
+      "id": "6ec4",
+      "name": "Jobeda Kahan",
+      "email": "jobeda@gmail.com",
+      "password": "1234",
+      "role": "admin"
     }
   ],
   "locations": [
