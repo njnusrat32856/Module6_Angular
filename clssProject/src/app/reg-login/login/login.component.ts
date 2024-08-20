@@ -63,7 +63,7 @@ export class LoginComponent {
           console.log('User logged in successfully:', res);
 
           this.authService.storeToken(res.token);
-          // const role = this.authService.getUserRole();
+          const role = this.authService.getUserRole();
           this.router.navigate(['/userprofile']);
           // Navigate to a protected route after login
         },

@@ -47,3 +47,5 @@ ng generate guard guard/authguard --implements CanActivate,CanLoad --project myb
 
 Role Guard
 ng generate guard role --project=clssProject
+ng generate guard reg-login/guard/role --implements CanActivate
+

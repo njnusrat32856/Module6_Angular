@@ -11,25 +11,32 @@ import { LoginComponent } from './reg-login/login/login.component';
 import { AuthGuard } from './reg-login/guard/authguard.guard';
 import { UserprofileComponent } from './home/userprofile/userprofile.component';
 import { LogoutComponent } from './reg-login/logout/logout.component';
+import { RoleGuard } from './reg-login/guard/role.guard';
 
 const routes: Routes = [
   {
-    path: 'location', component: ViewloComponent
+    path: 'location', component: ViewloComponent, canActivate: [AuthGuard, RoleGuard],
+    data:{role: 'Admin'}
   },
   {
-    path: 'createlo', component: CreateloComponent, canActivate: [AuthGuard]
+    path: 'createlo', component: CreateloComponent, canActivate: [AuthGuard, RoleGuard],
+    data:{role: 'Admin'}
   },
   {
-    path: 'updatelo/:id', component: UpdateloComponent
+    path: 'updatelo/:id', component: UpdateloComponent, canActivate: [AuthGuard, RoleGuard],
+    data:{role: 'Admin'}
   },
   {
-    path: 'student', component: ViewstComponent
+    path: 'student', component: ViewstComponent, canActivate: [AuthGuard, RoleGuard],
+    data:{role: 'User'}
   },
   {
-    path: 'createst', component: CreatestComponent, canActivate: [AuthGuard]
+    path: 'createst', component: CreatestComponent, canActivate: [AuthGuard, RoleGuard],
+    data:{role: 'User'}
   },
   {
-    path: 'updatest/:id', component: UpdatestComponent
+    path: 'updatest/:id', component: UpdatestComponent, canActivate: [AuthGuard, RoleGuard],
+    data:{role: 'User'}
   },
   {
     path: 'reg', component: RegistrationComponent
@@ -41,7 +48,9 @@ const routes: Routes = [
     path: '', redirectTo: 'login', pathMatch: 'full'
   },
   {
-    path: 'userprofile', component: UserprofileComponent, canActivate: [AuthGuard]
+    path: 'userprofile', component: UserprofileComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data:{role: ['Admin', 'User']}
   },
   {
     path: 'logout', component: LogoutComponent

@@ -60,6 +60,7 @@ export class AuthService {
           if (user.password === credentials.password) {
             const token = btoa(`${user.email}:${user.password}`);
             this.storeUserProfile(user);
+            this.setCurrentUser(user);
             return { token, user } as AuthResponse;
           } else {
             throw new Error('Invalid password');
@@ -74,13 +75,40 @@ export class AuthService {
       })
     );
   }
-
-  logout(): void {
-    localStorage.removeItem('token');
+  private setCurrentUser(user: UserModel): void {
+    if (this.isBrowser()) {
+      localStorage.setItem('currentUser', JSON.stringify(user));
+    }
+    this.currentUserSubject.next(user);
   }
 
+  // logout(): void {
+  //   localStorage.removeItem('token');
+  // }
+  logout(): void {
+    this.clearCurrentUser();
+    if (this.isBrowser()) {
+      localStorage.removeItem('token');
+    }
+    // localStorage.removeItem('token');
+  }
+
+  private clearCurrentUser(): void {
+    if (this.isBrowser()) {
+      localStorage.removeItem('currentUser');
+    }
+    this.currentUserSubject.next(null);
+  }
+
+  // getToken(): string | null {
+  //   return localStorage.getItem('token');
+  // }
   getToken(): string | null {
-    return localStorage.getItem('token');
+    return this.isBrowser() ? localStorage.getItem('token') : null;
+  }
+
+  isAuthenticated(): boolean {
+    return !!this.getToken();
   }
 
   // getToken() {
@@ -102,5 +130,9 @@ export class AuthService {
   getUserProfileFromStorage(): UserModel | null {
     const userProfile = localStorage.getItem('userProfile');
     return userProfile ? JSON.parse(userProfile) : null;
+  }
+
+  getUserRole(): any  {
+    return this.currentUserValue?.role;
   }
 }
