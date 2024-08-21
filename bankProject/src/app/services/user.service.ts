@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { UserModel } from '../model/user/user.model';
 import { AccountModel } from '../model/user/account.model';
 import { TransactionModel } from '../model/user/transaction.model';
@@ -19,7 +19,14 @@ export class UserService {
 
   // Fetch user data
   getUserData(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
+    return this.http.get(`${this.baseUrl}`)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+  private handleError(error: any): Observable<never> {
+    console.error('An error occurred:', error);
+    return throwError(() => new Error('Something bad happened; please try again later.'));
   }
 
   // Update user account information
