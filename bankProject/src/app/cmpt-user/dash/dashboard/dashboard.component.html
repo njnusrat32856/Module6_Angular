@@ -1,0 +1,39 @@
+<div class="dashboard-container">
+    <div class="profile-section">
+      <h2>User Profile</h2>
+      <p><strong>Name:</strong> {{ user.profile.name }}</p>
+      <p><strong>Email:</strong> {{ user.profile.email }}</p>
+      <p><strong>Phone:</strong> {{ user.profile.phoneNumber }}</p>
+    </div>
+  
+    <div class="account-section">
+      <h2>Your Accounts</h2>
+      <div *ngFor="let account of user.accounts" (click)="onSelectAccount(account)">
+        <p><strong>Account Type:</strong> {{ account.accountType }}</p>
+        <p><strong>Balance:</strong> {{ account.balance | currency }}</p>
+      </div>
+    </div>
+  
+    <div class="transaction-section" *ngIf="selectedAccount">
+      <h2>Transaction History for {{ selectedAccount.accountType }}</h2>
+      <div *ngFor="let transaction of transactions">
+        <p>{{ transaction.type }} of {{ transaction.amount | currency }} on {{ transaction.date | date }}</p>
+      </div>
+    </div>
+  
+    <div class="loan-section">
+      <h2>Your Loans</h2>
+      <div *ngFor="let loan of loans">
+        <p><strong>Loan Type:</strong> {{ loan.loanType }}</p>
+        <p><strong>Status:</strong> {{ loan.loanStatus }}</p>
+        <p><strong>Remaining Amount:</strong> {{ loan.remainingAmount | currency }}</p>
+      </div>
+    </div>
+  
+    <div class="actions-section">
+      <h2>Actions</h2>
+      <button (click)="onApplyForLoan('Home Loan', 100000)">Apply for Loan</button>
+      <button (click)="onFundTransfer(12345, 500)">Transfer Funds</button>
+    </div>
+  </div>
+  
