@@ -11,7 +11,7 @@ import { LoanModel } from '../../../model/user/loan.model';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent implements OnInit {
-  user!: UserModel;
+  users : any;
   selectedAccount!: AccountModel | null;
   transactions: TransactionModel[] = [];
   loans: LoanModel[] = [];
@@ -24,9 +24,9 @@ export class DashboardComponent implements OnInit {
 
   loadUserData(): void {
     this.userService.getUserData().subscribe(data => {
-      this.user = data;
-      this.transactions = this.user.transactions;
-      this.loans = this.user.loans;
+      this.users = data;
+      this.transactions = this.transactions;
+      this.loans = this.users.loans;
     });
   }
 
@@ -35,11 +35,11 @@ export class DashboardComponent implements OnInit {
   }
 
   onApplyForLoan(loanType: string, amount: number): void {
-    // Handle loan application logic
+    
   }
 
   onFundTransfer(targetAccountId: number, amount: number): void {
-    // Handle fund transfer logic
+    
   }
 
 }

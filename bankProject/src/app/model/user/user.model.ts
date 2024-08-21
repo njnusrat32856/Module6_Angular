@@ -16,6 +16,6 @@ export class UserModel {
     accounts !: AccountModel[];
     transactions !: TransactionModel[];
     loans !: LoanModel[];
-    profile !: UserProfile;
+    // profile !: UserProfile;
     dashboard !: UserDashboard;
   }

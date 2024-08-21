@@ -18,8 +18,8 @@ export class UserService {
   ) { }
 
   // Fetch user data
-  getUserData(): Observable<UserModel> {
-    return this.http.get<UserModel>(`${this.baseUrl}/user`);
+  getUserData(): Observable<any> {
+    return this.http.get(`${this.baseUrl}`);
   }
 
   // Update user account information
