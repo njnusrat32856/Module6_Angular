@@ -18,8 +18,8 @@ export class UserService {
   ) { }
 
   // Fetch user data
-  getUserData(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`)
+  getUserData(): Observable<UserModel[]> {
+    return this.http.get<UserModel[]>(`${this.baseUrl}`)
     .pipe(
       catchError(this.handleError)
     );

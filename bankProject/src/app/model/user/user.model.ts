@@ -13,8 +13,8 @@ export class UserModel {
     email !: string;
     phoneNumber !: string;
     address !: string;
-    accounts !: AccountModel[];
-    transactions !: TransactionModel[];
+    accounts !: AccountModel;
+    transactions !: TransactionModel;
     loans !: LoanModel[];
     // profile !: UserProfile;
     dashboard !: UserDashboard;

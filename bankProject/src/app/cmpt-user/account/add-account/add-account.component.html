@@ -1,1 +1,14 @@
-<p>add-account works!</p>
+<div class="container">
+    <div class="create-account-container">
+        <h2>Create New Account</h2>
+        <form (ngSubmit)="onCreateAccount()">
+            <label for="accountType">Account Type</label>
+            <input [(ngModel)]="newAccount.accountType" name="accountType" required />
+
+            <label for="balance">Initial Balance</label>
+            <input type="number" [(ngModel)]="newAccount.balance" name="balance" required />
+
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+</div>
