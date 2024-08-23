@@ -13,26 +13,26 @@ export class AccountService {
 
   // Fetch all accounts
   getAccounts(): Observable<any> {
-    return this.http.get<any>(this.baseUrl);
+    return this.http.get(this.baseUrl);
   }
 
   // Fetch an account by ID
-  getAccountById(accountId: number): Observable<AccountModel> {
-    return this.http.get<AccountModel>(`${this.baseUrl}/${accountId}`);
-  }
+  // getAccountById(accountId: number): Observable<AccountModel> {
+  //   return this.http.get<AccountModel>(`${this.baseUrl}/${accountId}`);
+  // }
 
   // Create a new account
-  createAccount(account: AccountModel): Observable<AccountModel> {
-    return this.http.post<AccountModel>(this.baseUrl, account);
+  createAccount(account: AccountModel): Observable<any> {
+    return this.http.post(this.baseUrl, account);
   }
 
   // Update an existing account
-  updateAccount(accountId: number, account: AccountModel): Observable<AccountModel> {
-    return this.http.put<AccountModel>(`${this.baseUrl}/${accountId}`, account);
-  }
+  // updateAccount(accountId: number, account: AccountModel): Observable<AccountModel> {
+  //   return this.http.put<AccountModel>(`${this.baseUrl}/${accountId}`, account);
+  // }
 
   // Delete an account
-  deleteAccount(accountId: number): Observable<void> {
-    return this.http.delete<void>(`${this.baseUrl}/${accountId}`);
-  }
+  // deleteAccount(accountId: number): Observable<void> {
+  //   return this.http.delete<void>(`${this.baseUrl}/${accountId}`);
+  // }
 }

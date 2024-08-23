@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountModel } from '../../../model/user/account.model';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { AccountService } from '../../../services/account.service';
 import { Router } from '@angular/router';
 
@@ -12,13 +12,18 @@ import { Router } from '@angular/router';
 export class AddAccountComponent implements OnInit{
   
   newAccount: AccountModel = new AccountModel();
+  formValue !: FormGroup;
+  accountData : any;
 
   constructor(
     private accountService: AccountService,
-    private router: Router
+    private router: Router,
+    private formBuilder: FormBuilder
   ) {}
   ngOnInit(): void {
-    this.onCreateAccount();
+    this.formValue = this.formBuilder.group({
+      
+    });
   }
 
   onCreateAccount(): void {

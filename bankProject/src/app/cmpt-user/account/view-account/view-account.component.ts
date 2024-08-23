@@ -10,7 +10,7 @@ import { AccountService } from '../../../services/account.service';
 })
 export class ViewAccountComponent implements OnInit {
   // account!: AccountModel;
-  account !: any;
+  accounts : any;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,7 +18,7 @@ export class ViewAccountComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.account = this.accountService.getAccounts();
+    this.accounts = this.accountService.getAccounts();
 
     // const accountId = +this.route.snapshot.paramMap.get('id')!;
     // this.loadAccount(accountId);

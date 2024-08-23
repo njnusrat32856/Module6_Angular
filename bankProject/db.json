@@ -37,11 +37,10 @@
     
   },
   "accounts": {
-    "accountId": 101,
-    "accountType": "Savings",
-    "balance": 10000,
-    "createdAt": "2023-01-01",
-    "updatedAt": "2024-01-01"
+    "id": 1,
+      "userId": 1,
+      "accountNumber": "ACC1234567890",
+      "balance": 1500.00
   },
   "transactions": {
     "transactionId": 201,
