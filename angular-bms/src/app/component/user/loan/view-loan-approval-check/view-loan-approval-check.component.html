@@ -33,7 +33,7 @@
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody *ngFor="let loan of loanAppCheck">
+                        <tbody *ngFor="let loan of loanAppCheck | async">
                             <tr >
                                 <td>{{loan.id}}</td>
                                 <td>{{loan.userId}}</td>
@@ -55,12 +55,12 @@
                 </div>
                 <div class="panel-footer">
                     <div class="row">
-                        <div class="col col-sm-6 col-xs-6">showing <b>2</b> out of <b>10</b> entries</div>
+                        <div class="col col-sm-6 col-xs-6">showing <b>5</b> out of <b>10</b> entries</div>
                         <div class="col-sm-6 col-xs-6">
                             <ul class="pagination hidden-xs pull-right">
                                 <li><a href="#"><</a></li>
                                 <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
+                                <li><a href="#">5</a></li>
                                 <!-- <li><a href="#">3</a></li>
                                 <li><a href="#">4</a></li> -->
                                 

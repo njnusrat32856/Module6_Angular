@@ -10,6 +10,7 @@ import { RoleGuard } from './reg-login/guard/roleguard.guard';
 import { ViewAccountComponent } from './component/user/account/view-account/view-account.component';
 import { ViewTransactionHistoryComponent } from './component/user/transaction/view-transaction-history/view-transaction-history.component';
 import { ViewLoanApprovalCheckComponent } from './component/user/loan/view-loan-approval-check/view-loan-approval-check.component';
+import { ApplyLoanFormComponent } from './component/user/loan/apply-loan-form/apply-loan-form.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,9 @@ const routes: Routes = [
   },
   {
     path: 'loanAppCheck', component: ViewLoanApprovalCheckComponent
+  },
+  {
+    path: 'applyloanform', component: ApplyLoanFormComponent
   }
 ];
 

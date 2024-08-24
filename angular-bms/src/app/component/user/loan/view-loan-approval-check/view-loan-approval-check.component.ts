@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LoanService } from '../../../../services/loan.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { LoanModel } from '../../../../model/loan.model';
 
 @Component({
   selector: 'app-view-loan-approval-check',
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ViewLoanApprovalCheckComponent implements OnInit{
   
-  loanAppCheck: any;
+  loanAppCheck?: Observable<LoanModel[]>;
 
   constructor(
     private loanService: LoanService,

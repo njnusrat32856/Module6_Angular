@@ -25,4 +25,12 @@ export class LoanService {
   addLoan(loan: LoanModel): Observable<LoanModel> {
     return this.http.post<LoanModel>(this.baseUrl, loan);
   }
+
+  applyForLoan(loan: LoanModel): Observable<any> {
+    return this.http.post(this.baseUrl, loan);
+  }
+
+  updateLoanStatus(id: number, updatedLoan: LoanModel): Observable<LoanModel> {
+    return this.http.put<LoanModel>(`${this.baseUrl}/${id}`, updatedLoan);
+  }
 }

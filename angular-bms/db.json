@@ -1,93 +1,135 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "1234",
+      "accountNumber": "ACC12345",
+      "balance": 1500,
+      "role": "User",
+      "transactions": [
         {
-            "id": 1,
-            "name": "John Doe",
-            "email": "john.doe@example.com",
-            "password": "1234",
-            "accountNumber": "ACC12345",
-            "balance": 1500.00,
-            "role": "User",
-            "transactions": [
-                {
-                    "id": 1,
-                    "accountId": 1,
-                    "type": "Deposit",
-                    "amount": 500.00,
-                    "date": "2024-08-20",
-                    "description": "Salary deposit"
-                }
-            ],
-            "loans": [
-                {
-                    "id": 1,
-                    "userId": 1,
-                    "amount": 10000.00,
-                    "interestRate": 5.0,
-                    "term": 24,
-                    "status": "Approved",
-                    "monthlyPayment": 438.71
-                }
-            ],
-            "profile": {
-                "address": "123 Main St, Anytown, USA",
-                "phoneNumber": "555-1234",
-                "dateOfBirth": "1985-05-15",
-                "nationality": "American"
-            }
+          "id": 1,
+          "accountId": 1,
+          "type": "Deposit",
+          "amount": 500,
+          "date": "2024-08-20",
+          "description": "Salary deposit"
         }
-    ],
-    "accounts": [
+      ],
+      "loans": [
         {
-            "id": 1,
-            "userId": 1,
-            "accountNumber": "ACC12345",
-            "balance": 1500.00
-        }
-    ],
-    "transactions": [
-        {
-            "id": 1,
-            "accountId": 1,
-            "type": "Deposit",
-            "amount": 500.00,
-            "date": "2024-08-20",
-            "description": "Salary deposit"
+          "id": 1,
+          "userId": 1,
+          "amount": 10000,
+          "interestRate": 5,
+          "term": 24,
+          "status": "Approved",
+          "monthlyPayment": 438.71
         },
         {
-            "id": 2,
-            "accountId": 1,
-            "type": "Withdraw",
-            "amount": 200.00,
-            "date": "2024-08-21",
-            "description": "ATM withdrawal"
+          "id": 1,
+          "userId": 1,
+          "amount": 3000,
+          "interestRate": 5,
+          "term": 24,
+          "status": "Rejected",
+          "monthlyPayment": 38.71
         }
-    ],
-    "loans": [
-        {
-            "id": 1,
-            "userId": 1,
-            "amount": 10000.00,
-            "interestRate": 5.0,
-            "term": 24,
-            "status": "Approved",
-            "monthlyPayment": 438.71
-        }
-    ],
-    "admins": [
-        {
-            "id": 1,
-            "name": "Admin User",
-            "email": "admin@example.com",
-            "password": "adminpass",
-            "profile": {
-                "role": "Manager",
-                "permissions": [
-                    "view_users",
-                    "manage_accounts",
-                    "process_loans"
-                ]
-            }
-        }
-    ]
+      ],
+      "profile": {
+        "address": "123 Main St, Anytown, USA",
+        "phoneNumber": "555-1234",
+        "dateOfBirth": "1985-05-15",
+        "nationality": "American"
+      }
+    }
+  ],
+  "accounts": [
+    {
+      "id": "1",
+      "userId": 1,
+      "accountNumber": "ACC12345",
+      "balance": 1500
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1",
+      "accountId": 1,
+      "type": "Deposit",
+      "amount": 500,
+      "date": "2024-08-20",
+      "description": "Salary deposit"
+    },
+    {
+      "id": "2",
+      "accountId": 1,
+      "type": "Withdraw",
+      "amount": 200,
+      "date": "2024-08-21",
+      "description": "ATM withdrawal"
+    }
+  ],
+  "loans": [
+    {
+      "id": "1",
+      "userId": 1,
+      "amount": 10000,
+      "interestRate": 5,
+      "term": 24,
+      "status": "Approved",
+      "monthlyPayment": 438.71
+    },
+    {
+      "id": "1",
+      "userId": 1,
+      "amount": 3000,
+      "interestRate": 5,
+      "term": 24,
+      "status": "Rejected",
+      "monthlyPayment": 38.71
+    },
+    {
+      "id": "3b8d",
+      "amount": 20000,
+      "interestRate": 10,
+      "term": 12
+    },
+    {
+      "id": "f03f",
+      "amount": 3000,
+      "interestRate": 10,
+      "term": 6
+    },
+    {
+      "id": "fe7a",
+      "amount": 40000,
+      "interestRate": 10,
+      "term": 12
+    },
+    {
+      "id": "82ea",
+      "amount": 10000,
+      "interestRate": 10,
+      "term": 12
+    }
+  ],
+  "admins": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "adminpass",
+      "profile": {
+        "role": "Manager",
+        "permissions": [
+          "view_users",
+          "manage_accounts",
+          "process_loans"
+        ]
+      }
+    }
+  ]
 }

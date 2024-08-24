@@ -19,6 +19,8 @@ import { ViewTransactionHistoryComponent } from './component/user/transaction/vi
 import { DepositFormComponent } from './component/user/transaction/deposit-form/deposit-form.component';
 import { UpdateAccountComponent } from './component/user/account/update-account/update-account.component';
 import { CommonModule } from '@angular/common';
+import { ViewLoanApprovalCheckComponent } from './component/user/loan/view-loan-approval-check/view-loan-approval-check.component';
+import { ApplyLoanFormComponent } from './component/user/loan/apply-loan-form/apply-loan-form.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { CommonModule } from '@angular/common';
     AddAccountComponent,
     ViewTransactionHistoryComponent,
     DepositFormComponent,
-    UpdateAccountComponent
+    UpdateAccountComponent,
+    ViewLoanApprovalCheckComponent,
+    ApplyLoanFormComponent
   ],
   imports: [
     BrowserModule,
