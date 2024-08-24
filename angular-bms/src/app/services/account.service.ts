@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Account } from '../model/account.model';
+import { AccountModel } from '../model/account.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +14,23 @@ export class AccountService {
     private http: HttpClient
   ) { }
 
-  getAccounts(): Observable<Account[]> {
-    return this.http.get<Account[]>(this.baseUrl);
+  getAccounts(): Observable<AccountModel[]> {
+    return this.http.get<AccountModel[]>(this.baseUrl);
   }
 
-  getAccount(id: number): Observable<Account> {
-    return this.http.get<Account>(`${this.baseUrl}/${id}`);
+  getAccountById(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
+
+  addAccount(account: AccountModel): Observable<AccountModel> {
+    return this.http.post<AccountModel>(this.baseUrl, account);
+  }
+
+  updateAccount(id: string,account: AccountModel): Observable<any> {
+    return this.http.put(`${this.baseUrl}/${account.id}`, account);
+  }
+
+  deleteAccount(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.baseUrl}/${id}`);
   }
 }

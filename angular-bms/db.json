@@ -96,24 +96,6 @@
       "amount": 20000,
       "interestRate": 10,
       "term": 12
-    },
-    {
-      "id": "f03f",
-      "amount": 3000,
-      "interestRate": 10,
-      "term": 6
-    },
-    {
-      "id": "fe7a",
-      "amount": 40000,
-      "interestRate": 10,
-      "term": 12
-    },
-    {
-      "id": "82ea",
-      "amount": 10000,
-      "interestRate": 10,
-      "term": 12
     }
   ],
   "admins": [

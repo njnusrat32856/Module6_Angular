@@ -11,8 +11,15 @@ import { ViewAccountComponent } from './component/user/account/view-account/view
 import { ViewTransactionHistoryComponent } from './component/user/transaction/view-transaction-history/view-transaction-history.component';
 import { ViewLoanApprovalCheckComponent } from './component/user/loan/view-loan-approval-check/view-loan-approval-check.component';
 import { ApplyLoanFormComponent } from './component/user/loan/apply-loan-form/apply-loan-form.component';
+import { AddAccountComponent } from './component/user/account/add-account/add-account.component';
+import { UpdateAccountComponent } from './component/user/account/update-account/update-account.component';
+import { LoanPayFormComponent } from './component/user/loan/loan-pay-form/loan-pay-form.component';
+import { DepositFormComponent } from './component/user/transaction/deposit-form/deposit-form.component';
+import { WithdrawFormComponent } from './component/user/transaction/withdraw-form/withdraw-form.component';
+import { FundTransferFormComponent } from './component/user/transaction/fund-transfer-form/fund-transfer-form.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {
     path: 'about', component: AboutComponent
   },
@@ -39,6 +46,24 @@ const routes: Routes = [
   },
   {
     path: 'applyloanform', component: ApplyLoanFormComponent
+  },
+  {
+    path: 'addaccount', component: AddAccountComponent
+  },
+  {
+    path: 'updateaccount/:id', component: UpdateAccountComponent
+  },
+  {
+    path: 'loanpayform', component: LoanPayFormComponent
+  },
+  {
+    path: 'deposit', component: DepositFormComponent
+  },
+  {
+    path: 'withdraw', component: WithdrawFormComponent
+  },
+  {
+    path: 'fundtransfer', component: FundTransferFormComponent
   }
 ];
 

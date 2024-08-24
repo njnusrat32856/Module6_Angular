@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="container">
     <div class="row">
         <div class="col-md-offset-1 col-md-10">
@@ -27,7 +27,7 @@
                                 <th>Account Number</th>
                                 <th>Balance</th>
                                 <th>Action</th>
-                                <!-- <th>Action</th> -->
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody *ngFor="let acc of accounts | async">
@@ -36,10 +36,10 @@
                                 <td>{{acc.userId}}</td>
                                 <td>{{acc.accountNumber}}</td>
                                 <td>{{acc.balance}}</td>
-                                <!-- <td>Sinaai-Waas</td> -->
+                                <td>Sinaai-Waas</td>
                                 <td>
                                     <ul class="action-list">
-                                        <!-- <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li> -->
+                                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
                                         <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
                                     </ul>
                                 </td>
@@ -56,19 +56,46 @@
                                 <li><a href="#"><</a></li>
                                 <li class="active"><a href="#">1</a></li>
                                 <li><a href="#">5</a></li>
-                                <!-- <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li> -->
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
                                 
                                 <li><a href="#">></a></li>
                             </ul>
-                            <!-- <ul class="pagination visible-xs pull-right">
+                            <ul class="pagination visible-xs pull-right">
                                 <li><a href="#"><</a></li>
                                 <li><a href="#">></a></li>
-                            </ul> -->
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div> -->
+
+<div class="container">
+    <h2 class="text-center">Accounts</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Account Number</th>
+                <th>Balance</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of accounts">
+                <td>{{ account.id }}</td>
+                <td>{{ account.accountNumber }}</td>
+                <td>{{ account.balance | currency }}</td>
+                <td>
+                    <ul class="action-list">
+                        <li><a (click)="updateAccount(account.id)" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

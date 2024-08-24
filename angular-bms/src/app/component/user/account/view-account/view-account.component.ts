@@ -16,8 +16,22 @@ export class ViewAccountComponent implements OnInit{
     private router: Router
   ) { }
 
+  // ngOnInit(): void {
+  //   this.accounts = this.accService.getAccounts();
+  // }
   ngOnInit(): void {
-    this.accounts = this.accService.getAccounts();
+    this.loadAccounts();
+  }
+
+  loadAccounts(): void {
+    this.accService.getAccounts().subscribe({
+      next: (data) => this.accounts = data,
+      error: (error) => console.error('Error loading accounts', error)
+    });
+  }
+
+  updateAccount(id: string) {
+    this.router.navigate(['/updateaccount', id]);
   }
 
 }

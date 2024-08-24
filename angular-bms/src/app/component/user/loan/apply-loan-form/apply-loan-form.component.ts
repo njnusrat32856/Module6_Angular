@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoanModel } from '../../../../model/loan.model';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoanService } from '../../../../services/loan.service';
 import { Router } from '@angular/router';
 
@@ -24,9 +24,9 @@ export class ApplyLoanFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.formValue = this.formBuilder.group({
-      amount: [''],
-      interestRate: [''],
-      term: [''],
+      amount: ['', Validators.required],
+      interestRate: ['', Validators.required],
+      term: ['', Validators.required],
       // status: [''],
       monthlyPayment: [{ value: '', disabled: true }]
     });
@@ -71,6 +71,7 @@ export class ApplyLoanFormComponent implements OnInit {
       this.applyLoan.monthlyPayment = this.formValue.value.monthlyPayment;
 
       console.log(this.applyLoan.monthlyPayment);
+      status: 'Pending'
 
 
 

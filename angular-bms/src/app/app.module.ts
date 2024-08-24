@@ -21,6 +21,9 @@ import { UpdateAccountComponent } from './component/user/account/update-account/
 import { CommonModule } from '@angular/common';
 import { ViewLoanApprovalCheckComponent } from './component/user/loan/view-loan-approval-check/view-loan-approval-check.component';
 import { ApplyLoanFormComponent } from './component/user/loan/apply-loan-form/apply-loan-form.component';
+import { LoanPayFormComponent } from './component/user/loan/loan-pay-form/loan-pay-form.component';
+import { WithdrawFormComponent } from './component/user/transaction/withdraw-form/withdraw-form.component';
+import { FundTransferFormComponent } from './component/user/transaction/fund-transfer-form/fund-transfer-form.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { ApplyLoanFormComponent } from './component/user/loan/apply-loan-form/ap
     DepositFormComponent,
     UpdateAccountComponent,
     ViewLoanApprovalCheckComponent,
-    ApplyLoanFormComponent
+    ApplyLoanFormComponent,
+    LoanPayFormComponent,
+    WithdrawFormComponent,
+    FundTransferFormComponent
   ],
   imports: [
     BrowserModule,

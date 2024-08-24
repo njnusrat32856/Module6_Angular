@@ -1,1 +1,20 @@
-<p>fund-transfer-form works!</p>
+<div class="container">
+    <h2 class="text-center">Fund Transfer</h2>
+    <form [formGroup]="formValue" (ngSubmit)="transfer()">
+        <div class="form-group">
+            <label for="fromAccountId">From Account ID</label>
+            <input type="number" id="fromAccountId" formControlName="fromAccountId" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="toAccountId">To Account ID</label>
+            <input type="number" id="toAccountId" formControlName="toAccountId" class="form-control" required>
+        </div>
+        <div class="form-group"> <label for="amount">Amount</label> <input type="number" id="amount"
+                formControlName="amount" class="form-control" required>
+        </div>
+        <div class="form-group"> <label for="description">Description</label> <input type="text" id="description"
+                formControlName="description" class="form-control"> </div> <button type="submit"
+            class="btn btn-primary btn-block" [disabled]="formValue.invalid">Transfer</button>
+
+    </form>
+</div>

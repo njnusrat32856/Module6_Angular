@@ -2,14 +2,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-offset-1 col-md-10">
+        <div class="col-lg-offset-1 ">
             <div class="panel">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col col-sm-3 col-xs-12">
+                        <div class="col col-md-3 col-lg-12">
                             <h4 class="title">Loan <span>Approval Check</span></h4>
                         </div>
-                        <div class="col-sm-9 col-xs-12 text-right">
+                        <div class="col-md-9 col-lg-12 text-right">
                             <div class="btn_group">
                                 <input type="text" class="form-control" placeholder="Search">
                                 <button class="btn btn-default" title="Reload"><i class="fa fa-sync-alt"></i></button>
@@ -24,7 +24,7 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>User Id</th>
+                                <!-- <th>User Id</th> -->
                                 <th>Amount</th>
                                 <th>Interest Rate</th>
                                 <th>Term</th>
@@ -36,12 +36,12 @@
                         <tbody *ngFor="let loan of loanAppCheck | async">
                             <tr >
                                 <td>{{loan.id}}</td>
-                                <td>{{loan.userId}}</td>
-                                <td>{{loan.amount}}</td>
+                                <!-- <td>{{loan.userId}}</td> -->
+                                <td>{{loan.amount | number:'1.2-2'}}</td>
                                 <td>{{loan.interestRate}}</td>
                                 <td>{{loan.term}}</td>
                                 <td>{{loan.status}}</td>
-                                <td>{{loan.monthlyPayment }}</td>
+                                <td>{{loan.monthlyPayment | number:'1.2-2' }}</td>
                                 <td>
                                     <ul class="action-list">
                                         <!-- <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li> -->
@@ -55,14 +55,14 @@
                 </div>
                 <div class="panel-footer">
                     <div class="row">
-                        <div class="col col-sm-6 col-xs-6">showing <b>5</b> out of <b>10</b> entries</div>
+                        <div class="col col-md-6 col-lg-6">showing <b>5</b> out of <b>10</b> entries</div>
                         <div class="col-sm-6 col-xs-6">
                             <ul class="pagination hidden-xs pull-right">
                                 <li><a href="#"><</a></li>
                                 <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">5</a></li>
-                                <!-- <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li> -->
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
                                 
                                 <li><a href="#">></a></li>
                             </ul>

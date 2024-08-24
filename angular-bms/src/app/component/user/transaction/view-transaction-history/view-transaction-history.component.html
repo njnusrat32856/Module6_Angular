@@ -1,5 +1,28 @@
 
 <div class="container">
+    <h2 class="text-center">Transaction History</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.date }}</td>
+          <td>{{ transaction.type }}</td>
+          <td>{{ transaction.amount | currency }}</td>
+          <td>{{ transaction.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+<!-- <div class="container">
     <div class="row">
         <div class="col-md-offset-1 col-md-10">
             <div class="panel">
@@ -28,23 +51,23 @@
                                 <th>Amount</th>
                                 <th>Date</th>
                                 <th>Description</th>
-                                <th>Action</th>
+                                <th>Action</th> -->
                                 <!-- <th>Action</th> -->
-                            </tr>
+                            <!-- </tr>
                         </thead>
                         <tbody *ngFor="let tran of transacHistory | async">
                             <tr>
                                 <td>{{tran.id}}</td>
                                 <td>{{tran.accountId}}</td>
                                 <td>{{tran.type}}</td>
-                                <td>{{tran.amount}}</td>
+                                <td>{{tran.amount | number:'1.2-2'}}</td>
                                 <td>{{tran.date}}</td>
                                 <td>{{tran.description}}</td>
-                                <!-- <td>Sinaai-Waas</td> -->
-                                <td>
+                                <td>Sinaai-Waas</td> -->
+                                <!-- <td>
                                     <ul class="action-list">
-                                        <!-- <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li> -->
-                                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li> -->
+                                        <!-- <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
                                     </ul>
                                 </td>
                             </tr>
@@ -59,20 +82,20 @@
                             <ul class="pagination hidden-xs pull-right">
                                 <li><a href="#"><</a></li>
                                 <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">5</a></li>
+                                <li><a href="#">5</a></li> -->
                                 <!-- <li><a href="#">3</a></li>
                                 <li><a href="#">4</a></li> -->
                                 
-                                <li><a href="#">></a></li>
-                            </ul>
+                                <!-- <li><a href="#">></a></li>
+                            </ul> -->
                             <!-- <ul class="pagination visible-xs pull-right">
                                 <li><a href="#"><</a></li>
                                 <li><a href="#">></a></li>
                             </ul> -->
-                        </div>
+                        <!-- </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->

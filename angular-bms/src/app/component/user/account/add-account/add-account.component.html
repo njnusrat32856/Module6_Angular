@@ -1,1 +1,24 @@
-<p>add-account works!</p>
+<div class="container">
+    <h2 class="text-center">Add Account</h2>
+    <form [formGroup]="formValue" (ngSubmit)="addAccount()">
+        <div class="form-group">
+            <label for="userId">User ID</label>
+            <input type="number" id="userId" formControlName="userId" class="form-control" placeholder="Enter User ID"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="accountNumber">Account Number</label>
+            <input type="text" id="accountNumber" formControlName="accountNumber" class="form-control"
+                placeholder="Enter Account Number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="balance">Initial Balance</label>
+            <input type="number" id="balance" formControlName="balance" class="form-control"
+                placeholder="Enter Initial Balance" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="formValue.invalid">Add Account</button>
+    </form>
+</div>

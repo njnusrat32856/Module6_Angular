@@ -22,4 +22,5 @@ export class ViewLoanApprovalCheckComponent implements OnInit{
     this.loanAppCheck = this.loanService.getLoans();
   }
 
+  
 }
