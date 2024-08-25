@@ -17,6 +17,7 @@ import { LoanPayFormComponent } from './component/user/loan/loan-pay-form/loan-p
 import { DepositFormComponent } from './component/user/transaction/deposit-form/deposit-form.component';
 import { WithdrawFormComponent } from './component/user/transaction/withdraw-form/withdraw-form.component';
 import { FundTransferFormComponent } from './component/user/transaction/fund-transfer-form/fund-transfer-form.component';
+import { RegisterComponent } from './reg-login/register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -31,6 +32,9 @@ const routes: Routes = [
   },
   {
     path: 'login', component: LoginComponent
+  },
+  {
+    path: 'register', component: RegisterComponent
   },
   {
     path: 'dashboard', component: DashboardComponent

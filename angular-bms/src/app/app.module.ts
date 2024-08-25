@@ -24,6 +24,7 @@ import { ApplyLoanFormComponent } from './component/user/loan/apply-loan-form/ap
 import { LoanPayFormComponent } from './component/user/loan/loan-pay-form/loan-pay-form.component';
 import { WithdrawFormComponent } from './component/user/transaction/withdraw-form/withdraw-form.component';
 import { FundTransferFormComponent } from './component/user/transaction/fund-transfer-form/fund-transfer-form.component';
+import { RegisterComponent } from './reg-login/register/register.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { FundTransferFormComponent } from './component/user/transaction/fund-tra
     ApplyLoanFormComponent,
     LoanPayFormComponent,
     WithdrawFormComponent,
-    FundTransferFormComponent
+    FundTransferFormComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

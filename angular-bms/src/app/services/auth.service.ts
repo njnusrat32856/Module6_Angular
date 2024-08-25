@@ -11,7 +11,7 @@ import { AuthResponse } from '../model/auth-response';
 export class AuthService {
 
 
-  private baseUrl: string = "http://localhost:3000/user";
+   baseUrl: string = "http://localhost:3000/user";
 
   private currentUserSubject: BehaviorSubject<UserModel | null>;
   public currentUser$: Observable<UserModel | null>;
