@@ -20,22 +20,29 @@ export class DepositFormComponent {
   ) {
     this.formValue = this.formBuilder.group({
       accountId: [''],
-      amount: [''],
+      type: [{value: '', disabled: true}],
+      amount: [0],
+      date: [''],
       description: ['']
     });
   }
 
   deposit(): void {
-    const newTransaction: TransactionModel = {
-      id: 0,
-      accountId: this.formValue.value.accountId,
-      type: 'Deposit',
-      amount: this.formValue.value.amount,
-      date: new Date().toISOString(),
-      description: this.formValue.value.description
-    };
+    // const newTransaction: TransactionModel = {
+    //   id: 0,
+    //   accountId: this.formValue.value.accountId,
+    //   type: 'Deposit',
+    //   amount: this.formValue.value.amount,
+    //   date: new Date().toISOString(),
+    //   description: this.formValue.value.description
+    // };
 
-    this.transactionService.addTransaction(newTransaction).subscribe(() => {
+    // this.transactionService.addTransaction(newTransaction).subscribe(() => {
+    //   this.formValue.reset();
+    //   this.router.navigate(['/transHistory']);
+    // });
+    this.transactionService.addTransaction(this.formValue.value).subscribe(() => {
+      console.log('Deposit Done!');
       this.formValue.reset();
       this.router.navigate(['/transHistory']);
     });

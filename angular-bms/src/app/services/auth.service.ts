@@ -30,12 +30,28 @@ export class AuthService {
     return isPlatformBrowser(this.platformId);
   }
 
+  registration(user: UserModel): Observable<AuthResponse> {
+    return this.http.post<UserModel>(this.baseUrl, user).pipe(
+      map((newUser: UserModel) => {
+        const token = btoa(`${newUser.email}${newUser.password}`);
+        return { token, user: newUser } as AuthResponse;
+      }),
+      catchError(error => {
+        console.error('Registration error:', error);
+        throw error;
+      })
+    );
+  }
+
+
+
   public get currentUserValue(): UserModel | null {
     return this.currentUserSubject.value;
   }
 
   login(credentials: { email: string; password: string }): Observable<AuthResponse> {
-    let params = new HttpParams().append('email', credentials.email);
+    let params = new HttpParams();
+    params.append('email', credentials.email);
 
     return this.http.get<UserModel[]>(`${this.baseUrl}`, { params }).pipe(
       map(users => {

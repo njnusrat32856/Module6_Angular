@@ -70,6 +70,14 @@
       "amount": 200,
       "date": "2024-08-21",
       "description": "ATM withdrawal"
+    },
+    
+    {
+      "id": "0d4e",
+      "accountId": 1,
+      "amount": 2000,
+      "date": "2024-07-29",
+      "description": "adsas"
     }
   ],
   "loans": [
