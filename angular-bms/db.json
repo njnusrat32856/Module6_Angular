@@ -71,7 +71,6 @@
       "date": "2024-08-21",
       "description": "ATM withdrawal"
     },
-    
     {
       "id": "0d4e",
       "accountId": 1,
@@ -103,6 +102,12 @@
       "id": "3b8d",
       "amount": 20000,
       "interestRate": 10,
+      "term": 12
+    },
+    {
+      "id": "39fd",
+      "amount": 20000,
+      "interestRate": 20,
       "term": 12
     }
   ],
