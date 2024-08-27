@@ -8,6 +8,7 @@
       "accountNumber": "ACC12345",
       "balance": 1500,
       "role": "User",
+      
       "transactions": [
         {
           "id": 1,
@@ -39,6 +40,7 @@
         }
       ],
       "profile": {
+        
         "address": "123 Main St, Anytown, USA",
         "phoneNumber": "555-1234",
         "dateOfBirth": "1985-05-15",
@@ -117,8 +119,9 @@
       "name": "Admin User",
       "email": "admin@example.com",
       "password": "adminpass",
+      "role": "Admin",
       "profile": {
-        "role": "Manager",
+        
         "permissions": [
           "view_users",
           "manage_accounts",

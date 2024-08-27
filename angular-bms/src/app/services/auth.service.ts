@@ -11,7 +11,7 @@ import { AuthResponse } from '../model/auth-response';
 export class AuthService {
 
 
-   baseUrl: string = "http://localhost:3000/user";
+   baseUrl: string = "http://localhost:3000/users";
 
   private currentUserSubject: BehaviorSubject<UserModel | null>;
   public currentUser$: Observable<UserModel | null>;
@@ -36,10 +36,7 @@ export class AuthService {
         const token = btoa(`${newUser.email}${newUser.password}`);
         return { token, user: newUser } as AuthResponse;
       }),
-      catchError(error => {
-        console.error('Registration error:', error);
-        throw error;
-      })
+      
     );
   }
 
@@ -59,7 +56,7 @@ export class AuthService {
           const user = users[0];
           if (user.password === credentials.password) {
             const token = btoa(`${user.email}:${user.password}`);
-            this.storeToken(token);
+            this.storeUserProfile(user);
             this.setCurrentUser(user);
             return { token, user } as AuthResponse;
           } else {
