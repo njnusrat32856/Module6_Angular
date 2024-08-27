@@ -27,8 +27,8 @@ export class LoanService {
     );
   }
 
-  getLoanById(accountNumber: string): Observable<Loan> {
-    return this.http.get<Loan>(`${this.apiUrl}?accountNumber=${accountNumber}`).pipe(
+  getLoanById(id: string): Observable<Loan> {
+    return this.http.get<Loan>(`${this.apiUrl}/${id}`).pipe(
       catchError(this.handleError)
     );
   }
@@ -43,21 +43,21 @@ export class LoanService {
 
   // Method to update a loan
   updateLoan(loan: Loan): Observable<Loan> {
-    return this.http.put<Loan>(`${this.apiUrl}/${loan.accountNumber}`, loan).pipe(
+    return this.http.put<Loan>(`${this.apiUrl}/${loan.id}`, loan).pipe(
       catchError(this.handleError)
     );
   }
 
   // Method to delete a loan
-  deleteLoan(loanId: string): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${loanId}`).pipe(
+  deleteLoan(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`).pipe(
       catchError(this.handleError)
     );
   }
 
   // Method to handle payment on a loan
-  makePayment(accountNumber: string, paymentAmount: number): Observable<Loan> {
-    return this.getLoanById(accountNumber).pipe(
+  makePayment(id: string, paymentAmount: number): Observable<Loan> {
+    return this.getLoanById(id).pipe(
       catchError(this.handleError),
       switchMap((loan) => {
         loan.balanceRemaining -= paymentAmount;
@@ -80,6 +80,9 @@ export class LoanService {
         `body was: ${error.error}`);
     }
     return throwError(
-      'Something went wrong; please try again later.');
+      () => new Error('Something went wrong; please try again later.')
+    );
+    // return throwError(
+    //   'Something went wrong; please try again later.');
   }
 }

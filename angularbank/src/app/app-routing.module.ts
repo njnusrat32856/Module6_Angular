@@ -34,8 +34,8 @@ const routes: Routes = [
     path: 'transactionlist', component: TransactionListComponent
   },
   { path: 'applyloan', component: LoanApplicationComponent},
-  { path: 'loandetails/:loanId', component: LoanDetailsComponent },
-  { path: 'loanpayment/:loanId', component: LoanPaymentComponent },
+  { path: 'loandetails/:id', component: LoanDetailsComponent },
+  { path: 'loanpayment/:id', component: LoanPaymentComponent },
   {
     path: 'loans', component: LoanListComponent
   }

@@ -137,7 +137,7 @@
   ],
   "loans": [
     {
-      "loanId": "1",
+      "id": "e4a6",
       "accountNumber": "3227974707",
       "loanAmount": 50000,
       "interestRate": 4.5,
@@ -145,20 +145,19 @@
       "startDate": "2020-08-26T17:03:15.215Z",
       "endDate": "2028-09-01T00:00:00Z",
       "monthlyPayment": 932.13,
-      "balanceRemaining": 48000,
-      "status": "Active",
-      "id": "e4a6"
+      "balanceRemaining": 47900,
+      "status": "Active"
     },
     {
-      "id": "f3eb",
-      "accountNumber": "3227974707",
-      "loanAmount": 1000,
-      "interestRate": 5,
-      "durationInMonths": 6,
-      "startDate": "2024-08-26T19:15:26.106Z",
-      "endDate": "2025-02-26T19:15:26.106Z",
-      "monthlyPayment": 8.333333333333334,
-      "balanceRemaining": 1000,
+      "id": "5fdf",
+      "accountNumber": "1381171703",
+      "loanAmount": 20000,
+      "interestRate": 10,
+      "durationInMonths": 12,
+      "startDate": "2024-08-27T11:35:58.081Z",
+      "endDate": "2025-08-27T11:35:58.081Z",
+      "monthlyPayment": 166.66666666666666,
+      "balanceRemaining": 19000,
       "status": "Pending"
     }
   ]

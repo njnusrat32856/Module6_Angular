@@ -1,8 +1,8 @@
-<div class="loan-payment-container" *ngIf="loan">
+<div class="loan-payment-container" *ngIf="loans">
     <h2>Make a Payment</h2>
-    <p><strong>Loan ID:</strong> {{ loan.accountNumber }}</p>
-    <p><strong>Account Number:</strong> {{ loan.accountNumber }}</p>
-    <p><strong>Balance Remaining:</strong> {{ loan.balanceRemaining | currency }}</p>
+    <p><strong>Loan ID:</strong> {{ loans.id }}</p>
+    <p><strong>Account Number:</strong> {{ loans.accountNumber }}</p>
+    <p><strong>Balance Remaining:</strong> {{ loans.balanceRemaining | currency }}</p>
   
     <form (ngSubmit)="onSubmit()" class="loan-payment-form">
       <div class="form-group">

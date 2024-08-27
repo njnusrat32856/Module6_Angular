@@ -1,5 +1,5 @@
 export class Loan {
-    // loanId!: string; 
+    id!: string; 
     accountNumber!: string; 
     loanAmount!: number; 
     interestRate!: number; 

@@ -9,40 +9,40 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './loan-payment.component.css'
 })
 export class LoanPaymentComponent implements OnInit {
-  loan: Loan | undefined;
+  loans: Loan | undefined;
   paymentAmount: number = 0;
 
   constructor(
     private loanService: LoanService,
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
-    const loanId = this.route.snapshot.paramMap.get('loanId');
-    if (loanId) {
-      this.loanService.getLoanById(loanId).subscribe(
-        (data) => {
-          this.loan = data;
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.loanService.getLoanById(id).subscribe({
+        next: (data) => {
+          this.loans = data;
         },
-        (error) => {
+        error: (error) => {
           alert('Failed to load loan details.');
         }
-      );
+      });
     }
   }
 
   onSubmit(): void {
-    if (this.loan && this.paymentAmount > 0) {
-      this.loanService.makePayment(this.loan.accountNumber, this.paymentAmount).subscribe(
-        () => {
+    if (this.loans && this.paymentAmount > 0) {
+      this.loanService.makePayment(this.loans.id, this.paymentAmount).subscribe({
+        next: () => {
           alert('Payment successful!');
           this.router.navigate(['/loans']);
         },
-        (error) => {
+        error: (error) => {
           alert('Failed to process payment. Please try again.');
         }
-      );
+      });
     } else {
       alert('Please enter a valid payment amount.');
     }

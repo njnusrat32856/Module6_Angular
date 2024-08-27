@@ -13,7 +13,7 @@ export class WithdrawComponent {
   accountNumber: string = '';
   amount: number = 0;
   transactions: Transaction[] = [];
-
+  
   constructor(
     private transactionService: TransactionService,
     private router: Router
