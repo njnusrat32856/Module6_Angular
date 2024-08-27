@@ -1,21 +1,47 @@
 <div class="fund-transfer-container">
-    <h2>Fund Transfer</h2>
-    <form (ngSubmit)="onSubmit()" class="fund-transfer-form">
-      <div class="form-group">
-        <label for="sourceAccountNumber">Source Account Number:</label>
-        <input id="sourceAccountNumber" [(ngModel)]="sourceAccountNumber" name="sourceAccountNumber" required>
-      </div>
-      <div class="form-group">
-        <label for="targetAccountNumber">Target Account Number:</label>
-        <input id="targetAccountNumber" [(ngModel)]="targetAccountNumber" name="targetAccountNumber" required>
-      </div>
-      <div class="form-group">
-        <label for="amount">Amount:</label>
-        <input id="amount" [(ngModel)]="amount" name="amount" type="number" required>
-      </div>
-      <div class="form-group full-width">
-        <button type="submit">Transfer</button>
-      </div>
-    </form>
-  </div>
-  
+  <h2>Fund Transfer</h2>
+  <form (ngSubmit)="onSubmit()" class="fund-transfer-form">
+    <div class="form-group">
+      <label for="sourceAccountNumber">Source Account Number:</label>
+      <input id="sourceAccountNumber" [(ngModel)]="transaction.accountNumber" name="sourceAccountNumber" required>
+    </div>
+    <div class="form-group">
+      <label for="targetAccountNumber">Target Account Number:</label>
+      <input id="targetAccountNumber" [(ngModel)]="transaction.targetAccountNumber" name="targetAccountNumber" required>
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input id="amount" [(ngModel)]="transaction.amount" name="amount" type="number" required>
+    </div>
+    <!-- Description (Optional) -->
+    <div class="form-group">
+      <label for="description">Description (Optional)</label>
+      <input type="text" id="description" [(ngModel)]="transaction.description" name="description">
+    </div>
+    <div class="form-group full-width">
+      <button type="submit">Transfer Funds</button>
+    </div>
+  </form>
+</div>
+
+
+<!-- <div class="fund-transfer-container">
+  <h2>Fund Transfer</h2>
+  <form (ngSubmit)="onSubmit()" class="fund-transfer-form">
+    <div class="form-group">
+      <label for="sourceAccountNumber">Source Account Number:</label>
+      <input id="sourceAccountNumber" [(ngModel)]="sourceAccountNumber" name="sourceAccountNumber" required>
+    </div>
+    <div class="form-group">
+      <label for="targetAccountNumber">Target Account Number:</label>
+      <input id="targetAccountNumber" [(ngModel)]="targetAccountNumber" name="targetAccountNumber" required>
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input id="amount" [(ngModel)]="amount" name="amount" type="number" required>
+    </div>
+    <div class="form-group full-width">
+      <button type="submit">Transfer</button>
+    </div>
+  </form>
+</div> -->

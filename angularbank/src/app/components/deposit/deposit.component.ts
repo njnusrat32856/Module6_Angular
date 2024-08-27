@@ -19,7 +19,7 @@ export class DepositComponent {
   constructor(
     private transactionService: TransactionService,
     private router: Router
-  ) {}
+  ) { }
 
   onSubmit() {
     if (this.accountNumber && this.amount > 0) {
@@ -28,24 +28,24 @@ export class DepositComponent {
           alert('Deposit successful!');
           this.loadTransactionHistory();
         },
-        error:(error) => {
+        error: (error) => {
           alert('Failed to process deposit. Please try again.');
         }
-    });
+      });
     } else {
       alert('Please enter a valid account number and amount.');
     }
   }
 
   loadTransactionHistory(): void {
-    this.transactionService.getTransactionHistory(this.accountNumber).subscribe(
-      (data) => {
+    this.transactionService.getTransactionHistory(this.accountNumber).subscribe({
+      next: (data) => {
         this.transactions = data;
       },
-      (error) => {
+      error: (error) => {
         alert('Failed to load transaction history.');
       }
-    );
+    });
   }
 
   // accountNumber: string = '';
@@ -63,7 +63,7 @@ export class DepositComponent {
   //         alert('Deposit successful!');
   //         this.accountNumber = '';
   //         this.amount = 0;
-          
+
   //       },
   //       error: (error) => {
   //         alert('Failed to process deposit. Please try again.');

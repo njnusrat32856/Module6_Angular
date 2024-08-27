@@ -1,8 +1,24 @@
 {
+  "user": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "hashedpassword123",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "password": "hashedpassword456",
+      "role": "admin"
+    }
+  ],
   "accounts": [
     {
       "id": "3bd1",
-      "accountNumber": "997100221655",
+      "accountNumber": "9971002216",
       "firstName": "Nusrat",
       "lastName": "Jahan",
       "email": "n.j.naima222@gmail.com",
@@ -16,11 +32,11 @@
     {
       "id": "e738",
       "aid": "lurpi1vps",
-      "accountNumber": "R2U5I9K2D9E7P2B0F3F0",
+      "accountNumber": "9E7P2B0F3",
       "firstName": "Jobeda",
       "lastName": "Khanom",
       "gender": "Female",
-      "email": "jobedakhanom@gmail.com",
+      "email": "jobeda@gmail.com",
       "address": "MIrpur, Dhaka",
       "cell": "1234555",
       "nid": "432423",
@@ -75,6 +91,22 @@
       "accountType": "Current Account",
       "currentBalance": 0,
       "creatingDate": "2024-08-26T17:48:46.858Z",
+      "status": false
+    },
+    {
+      "id": "fd9d",
+      "aid": "w5dsoq0g3",
+      "accountNumber": "8084621244",
+      "firstName": "Md. Saiful",
+      "lastName": "Islam",
+      "gender": "Male",
+      "email": "saiful@gmail.com",
+      "address": "mirpur",
+      "cell": "01355454543",
+      "nid": "14323545545",
+      "accountType": "Current Account",
+      "currentBalance": 0,
+      "creatingDate": "2024-08-27T16:25:24.213Z",
       "status": false
     }
   ],
@@ -144,27 +176,6 @@
       "description": "Deposit"
     },
     {
-      "0": {
-        "tid": "pf189nv0n",
-        "accountNumber": "4534534654",
-        "type": "Transfer",
-        "amount": 40000,
-        "date": "2024-08-27T12:44:36.573Z",
-        "description": "Transfer to 3453465654",
-        "targetAccountNumber": "3453465654"
-      },
-      "1": {
-        "tid": "6t359lobm",
-        "accountNumber": "3453465654",
-        "type": "Transfer",
-        "amount": 40000,
-        "date": "2024-08-27T12:44:36.573Z",
-        "description": "Transfer from 4534534654",
-        "targetAccountNumber": "4534534654"
-      },
-      "id": "c051"
-    },
-    {
       "id": "1cf5",
       "tid": "v36be07nd",
       "accountNumber": "997100221655",
@@ -174,25 +185,31 @@
       "description": "Withdraw"
     },
     {
-      "0": {
-        "tid": "mkzk9ek26",
-        "accountNumber": "997100221655",
-        "type": "Transfer",
-        "amount": 3000,
-        "date": "2024-08-27T12:48:59.588Z",
-        "description": "Transfer to 3453465654",
-        "targetAccountNumber": "3453465654"
-      },
-      "1": {
-        "tid": "jjvisejzj",
-        "accountNumber": "3453465654",
-        "type": "Transfer",
-        "amount": 3000,
-        "date": "2024-08-27T12:48:59.588Z",
-        "description": "Transfer from 997100221655",
-        "targetAccountNumber": "997100221655"
-      },
-      "id": "d48f"
+      "id": "21d7",
+      "accountNumber": "997100221",
+      "type": "Transfer",
+      "amount": 2000,
+      "date": "2024-08-27T18:37:43.733Z",
+      "description": "Transfer to 4234234325",
+      "targetAccountNumber": "4234234325"
+    },
+    {
+      "id": "30ad",
+      "tid": "3pfyn8",
+      "accountNumber": "3227974707",
+      "type": "Deposit",
+      "amount": 50000,
+      "date": "2024-08-27T18:53:43.754Z",
+      "description": "Deposit"
+    },
+    {
+      "id": "5e3d",
+      "accountNumber": "4234234325",
+      "type": "Transfer",
+      "amount": 1000,
+      "date": "2024-08-27T19:12:18.922Z",
+      "description": "Transfer to 0234234325",
+      "targetAccountNumber": "0234234325"
     }
   ],
   "loans": [

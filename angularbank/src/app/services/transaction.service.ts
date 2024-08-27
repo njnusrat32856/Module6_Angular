@@ -49,33 +49,42 @@ export class TransactionService {
     return this.http.post<Transaction>(this.apiUrl, transaction);
   }
 
-  // Method to transfer funds
-  transfer(sourceAccountNumber: string, targetAccountNumber: string, amount: number): Observable<Transaction[]> {
-    const sourceTransaction: Transaction = {
-      tid: this.generateUniqueId(),
-      accountNumber: sourceAccountNumber,
-      type: 'Transfer',
-      amount,
-      date: new Date(),
-      description: `Transfer to ${targetAccountNumber}`,
-      targetAccountNumber
-    };
 
-    const targetTransaction: Transaction = {
-      tid: this.generateUniqueId(),
-      accountNumber: targetAccountNumber,
-      type: 'Transfer',
-      amount,
-      date: new Date(),
-      description: `Transfer from ${sourceAccountNumber}`,
-      targetAccountNumber: sourceAccountNumber
-    };
-
-    return this.http.post<Transaction[]>(this.apiUrl, [sourceTransaction, targetTransaction]);
+  // Create a new transaction
+  createFundTransaction(transaction: Transaction): Observable<Transaction> {
+    return this.http.post<Transaction>(this.apiUrl, transaction);
   }
+
+  
 
   // Utility method to generate unique IDs
   private generateUniqueId(): string {
-    return Math.random().toString(36).substr(2, 9);
+    return Math.random().toString(36).substr(2, 6);
   }
+
+
+  // Method to transfer funds
+  // transfer(sourceAccountNumber: string, targetAccountNumber: string, amount: number): Observable<Transaction[]> {
+  //   const sourceTransaction: Transaction = {
+  //     tid: this.generateUniqueId(),
+  //     accountNumber: sourceAccountNumber,
+  //     type: 'Transfer',
+  //     amount,
+  //     date: new Date(),
+  //     description: `Transfer to ${targetAccountNumber}`,
+  //     targetAccountNumber
+  //   };
+
+  //   const targetTransaction: Transaction = {
+  //     tid: this.generateUniqueId(),
+  //     accountNumber: targetAccountNumber,
+  //     type: 'Transfer',
+  //     amount,
+  //     date: new Date(),
+  //     description: `Transfer from ${sourceAccountNumber}`,
+  //     targetAccountNumber: sourceAccountNumber
+  //   };
+
+  //   return this.http.post<Transaction[]>(this.apiUrl, [sourceTransaction, targetTransaction]);
+  // }
 }

@@ -3,7 +3,7 @@
     <table class="transaction-table">
       <thead>
         <tr>
-          <th>Transaction ID</th>
+          <!-- <th>Transaction ID</th> -->
           <th>Account Number</th>
           <th>Type</th>
           <th>Description</th>
@@ -13,7 +13,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let transaction of transactions" [ngClass]="getTransactionTypeClass(transaction.type)">
-          <td>{{ transaction.tid }}</td>
+          <!-- <td>{{ transaction.tid }}</td> -->
           <td>{{ transaction.accountNumber }}</td>
           <td>{{ transaction.type }}</td>
           <td>{{ transaction.description }}</td>

@@ -16,7 +16,7 @@ import { LoanPaymentComponent } from './components/loan-payment/loan-payment.com
 
 const routes: Routes = [
   { path: 'create-account', component: AccountFormComponent },
-  { path: 'view-accounts', component: AccountViewComponent },
+  { path: 'viewaccounts', component: AccountViewComponent },
   { path: 'accounts', component: AccountListComponent },
   { 
     path: 'transHistory/:accountNumber', component: TransactionHistoryComponent 
