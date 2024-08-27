@@ -1,0 +1,61 @@
+.transaction-history-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .transaction-table thead {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .transaction-table th,
+  .transaction-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .transaction-table th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  
+  .transaction-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .transaction-table tbody tr:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+  }
+  
+  .transaction-table .deposit {
+    color: #28a745;
+  }
+  
+  .transaction-table .withdraw {
+    color: #dc3545;
+  }
+  
+  .transaction-table .transfer {
+    color: #ffc107;
+  }
+  

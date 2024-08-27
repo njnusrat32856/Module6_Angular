@@ -1,0 +1,19 @@
+
+
+
+
+
+
+<div class="loan-details-container" *ngIf="loan">
+  <h2>Loan Details</h2>
+  <!-- <p><strong>Loan ID:</strong> {{ loan.loanId }}</p> -->
+  <p><strong>Account Number:</strong> {{ loan.accountNumber }}</p>
+  <p><strong>Loan Amount:</strong> {{ loan.loanAmount | currency }}</p>
+  <p><strong>Interest Rate:</strong> {{ loan.interestRate }}%</p>
+  <p><strong>Duration:</strong> {{ loan.durationInMonths }} months</p>
+  <p><strong>Monthly Payment:</strong> {{ loan.monthlyPayment | currency }}</p>
+  <p><strong>Start Date:</strong> {{ loan.startDate | date }}</p>
+  <p><strong>End Date:</strong> {{ loan.endDate | date }}</p>
+  <p><strong>Balance Remaining:</strong> {{ loan.balanceRemaining | currency }}</p>
+  <p><strong>Status:</strong> {{ loan.status }}</p>
+</div>

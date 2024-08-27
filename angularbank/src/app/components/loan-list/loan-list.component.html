@@ -1,0 +1,38 @@
+
+
+
+
+
+
+
+
+
+
+<div class="loan-list-container">
+    <h2>Loans for Account: {{ accountNumber }}</h2>
+    <table class="loan-table">
+        <thead>
+            <tr>
+                <!-- <th>Loan ID</th> -->
+                <th>Loan Amount</th>
+                <th>Interest Rate</th>
+                <th>Duration (Months)</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let loan of loans">
+                <!-- <td>{{ loan.loanId }}</td> -->
+                <td>{{ loan.loanAmount | currency }}</td>
+                <td>{{ loan.interestRate }}%</td>
+                <td>{{ loan.durationInMonths }}</td>
+                <td>{{ loan.status }}</td>
+                <td>
+                    <button (click)="viewLoanDetails(loan.accountNumber)">View Details</button>
+                    <button (click)="makePayment(loan.accountNumber)">Make Payment</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,28 @@
+.loan-details-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .loan-details-container p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .loan-details-container p strong {
+    color: #555;
+    display: inline-block;
+    width: 150px;
+  }
+  

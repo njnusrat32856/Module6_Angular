@@ -1,0 +1,165 @@
+{
+  "accounts": [
+    {
+      "id": "3bd1",
+      "accountNumber": "997100221655",
+      "firstName": "Nusrat",
+      "lastName": "Jahan",
+      "email": "n.j.naima222@gmail.com",
+      "cell": "1234555",
+      "nid": "432423",
+      "accountType": "Savings",
+      "currentBalence": 10000,
+      "creatingDate": "2024-07-29",
+      "status": true
+    },
+    {
+      "id": "e738",
+      "aid": "lurpi1vps",
+      "accountNumber": "R2U5I9K2D9E7P2B0F3F0",
+      "firstName": "Jobeda",
+      "lastName": "Khanom",
+      "gender": "Female",
+      "email": "jobedakhanom@gmail.com",
+      "address": "MIrpur, Dhaka",
+      "cell": "1234555",
+      "nid": "432423",
+      "accountType": "Savings",
+      "currentBalance": 0,
+      "creatingDate": "2024-08-26T13:20:59.773Z",
+      "status": true
+    },
+    {
+      "id": "fca0",
+      "aid": "aerv97cyq",
+      "accountNumber": "3227974707",
+      "firstName": "Nusrat",
+      "lastName": "Jahan",
+      "gender": "Female",
+      "email": "n.j.naima222@gmail.com",
+      "address": "mirpur",
+      "cell": "1234555",
+      "nid": "432423",
+      "accountType": "Savings",
+      "currentBalance": 0,
+      "creatingDate": "2024-08-26T13:30:25.929Z",
+      "status": true
+    },
+    {
+      "id": "520a",
+      "aid": "4szj7enh0",
+      "accountNumber": "8522180383",
+      "firstName": "Mostofa",
+      "lastName": "Rezvi",
+      "gender": "Male",
+      "email": "rezvi@gmail.com",
+      "address": "Azimpur",
+      "cell": "01233124",
+      "nid": "124134",
+      "accountType": "Checking",
+      "currentBalance": 0,
+      "creatingDate": "2024-08-26T13:36:23.848Z",
+      "status": false
+    },
+    {
+      "id": "6d33",
+      "aid": "w4qb840o0",
+      "accountNumber": "1381171703",
+      "firstName": "Raju",
+      "lastName": "Ahmad",
+      "gender": "Male",
+      "email": "raju@gmail.com",
+      "address": "Azimpur",
+      "cell": "01355454543",
+      "nid": "14323545545",
+      "accountType": "Current Account",
+      "currentBalance": 0,
+      "creatingDate": "2024-08-26T17:48:46.858Z",
+      "status": false
+    }
+  ],
+  "transactions": [
+    {
+      "tid": "tx123abc",
+      "accountNumber": "3227974707",
+      "type": "Deposit",
+      "amount": 500,
+      "date": "2024-08-26T10:15:30Z",
+      "description": "Initial deposit",
+      "id": "f19e"
+    },
+    {
+      "tid": "tx124abc",
+      "accountNumber": "3227974707",
+      "type": "Withdraw",
+      "amount": 100,
+      "date": "2024-08-27T09:30:00Z",
+      "description": "ATM withdrawal",
+      "id": "eee2"
+    },
+    {
+      "tid": "tx125abc",
+      "accountNumber": "3227974707",
+      "type": "Deposit",
+      "amount": 1000,
+      "date": "2024-08-28T14:45:00Z",
+      "description": "Salary deposit",
+      "id": "24e9"
+    },
+    {
+      "tid": "tx126abc",
+      "accountNumber": "3227974707",
+      "type": "Transfer",
+      "amount": 200,
+      "date": "2024-08-29T12:00:00Z",
+      "description": "Transfer to 997100221655",
+      "targetAccountNumber": "997100221655",
+      "id": "5fd5"
+    },
+    {
+      "id": "1360",
+      "tid": "9p81n3h21",
+      "accountNumber": "3227974707",
+      "type": "Deposit",
+      "amount": 10000,
+      "date": "2024-08-26T17:00:00.995Z",
+      "description": "Deposit"
+    },
+    {
+      "id": "3cc2",
+      "tid": "tepi99b41",
+      "accountNumber": "3227974707",
+      "type": "Withdraw",
+      "amount": 500,
+      "date": "2024-08-26T17:03:15.215Z",
+      "description": "Withdraw"
+    }
+  ],
+  "loans": [
+    {
+      "loanId": "1",
+      "accountNumber": "3227974707",
+      "loanAmount": 50000,
+      "interestRate": 4.5,
+      "durationInMonths": 60,
+      "startDate": "2020-08-26T17:03:15.215Z",
+      "endDate": "2028-09-01T00:00:00Z",
+      "monthlyPayment": 932.13,
+      "balanceRemaining": 48000,
+      "status": "Active",
+      "id": "e4a6"
+    },
+    {
+      "id": "f3eb",
+      "accountNumber": "3227974707",
+      "loanAmount": 1000,
+      "interestRate": 5,
+      "durationInMonths": 6,
+      "startDate": "2024-08-26T19:15:26.106Z",
+      "endDate": "2025-02-26T19:15:26.106Z",
+      "monthlyPayment": 8.333333333333334,
+      "balanceRemaining": 1000,
+      "status": "Pending"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<div class="account-form-container">
+    <h2>Create New Account</h2>
+    <form (ngSubmit)="onSubmit()" class="account-form">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input id="firstName" [(ngModel)]="account.firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" [(ngModel)]="account.lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" [(ngModel)]="account.gender" name="gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" [(ngModel)]="account.email" name="email" type="email" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input id="address" [(ngModel)]="account.address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="cell">Cell:</label>
+        <input id="cell" [(ngModel)]="account.cell" name="cell" type="tel" required>
+      </div>
+      <div class="form-group">
+        <label for="nid">NID:</label>
+        <input id="nid" [(ngModel)]="account.nid" name="nid" required>
+      </div>
+      <div class="form-group">
+        <label for="accountType">Account Type:</label>
+        <select id="accountType" [(ngModel)]="account.accountType" name="accountType" required>
+          <option value="Savings Account">Savings</option>
+          <option value="Current Account">Current</option>
+          <option value="Checking Account">Checking</option>
+        </select>
+      </div>
+      <div class="form-group full-width">
+        <button type="submit">Create Account</button>
+      </div>
+    </form>
+  </div>
+  

@@ -1,0 +1,17 @@
+<div class="withdraw-container">
+    <h2>Withdraw Funds</h2>
+    <form (ngSubmit)="onSubmit()" class="withdraw-form">
+      <div class="form-group">
+        <label for="accountNumber">Account Number:</label>
+        <input id="accountNumber" [(ngModel)]="accountNumber" name="accountNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input id="amount" [(ngModel)]="amount" name="amount" type="number" required>
+      </div>
+      <div class="form-group full-width">
+        <button type="submit">Withdraw</button>
+      </div>
+    </form>
+  </div>
+  
