@@ -26,6 +26,8 @@ import { TransactionApprovalComponent } from './employee/transaction-approval/tr
 import { AccountOpeningComponent } from './employee/account-opening/account-opening.component';
 import { LoanApplicationComponent } from './employee/loan-application/loan-application.component';
 import { EmployeeProfileComponent } from './employee/employee-profile/employee-profile.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { EmployeeProfileComponent } from './employee/employee-profile/employee-p
     TransactionApprovalComponent,
     AccountOpeningComponent,
     LoanApplicationComponent,
-    EmployeeProfileComponent
+    EmployeeProfileComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

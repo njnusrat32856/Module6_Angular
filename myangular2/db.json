@@ -1,27 +1,68 @@
 {
-    "account": [
-        {
-            "clientId": 1,
-            "username": "naima",
-            "email": "n.j.naima222@gmail.com",
-            "balance": "100",
-            "accountNumber": "12323",
-            "transaction": {
-                "id": 1,
-                "date": "10/2000",
-                "description": "",
-                "amount": 20,
-                "type": ""
-            }
-        }
-    ],
-    "transaction": [
-        {
-            "id": 1,
-            "date": "10/2000",
-            "description": "",
-            "amount": 20,
-            "type": ""
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "hashedpassword123",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "password": "hashedpassword456",
+      "role": "admin"
+    },
+    {
+      "id": "ff95",
+      "email": "johndoe@example.com",
+      "password": "hedpassword123"
+    },
+    {
+      "id": "3513",
+      "email": "johndoe@example.com",
+      "password": "hashedpassword123"
+    },
+    {
+      "id": "bee4",
+      "email": "johndoe@example.com",
+      "password": "hashedpassword123"
+    },
+    {
+      "id": "55ad",
+      "email": "janesmith@example.com",
+      "password": "hashedpassword456"
+    },
+    {
+      "id": "bfb0",
+      "email": "janesmith@example.com",
+      "password": "hashedpassword456"
+    }
+  ],
+  "account": [
+    {
+      "clientId": 1,
+      "username": "naima",
+      "email": "n.j.naima222@gmail.com",
+      "balance": "100",
+      "accountNumber": "12323",
+      "transaction": {
+        "id": 1,
+        "date": "10/2000",
+        "description": "",
+        "amount": 20,
+        "type": ""
+      }
+    }
+  ],
+  "transaction": [
+    {
+      "id": 1,
+      "date": "10/2000",
+      "description": "",
+      "amount": 20,
+      "type": ""
+    }
+  ]
 }
