@@ -19,7 +19,7 @@ export class FundTransferComponent {
   constructor(
     private transactionService: TransactionService,
     private router: Router
-  ) {}
+  ) { }
 
   onSubmit() {
     if (this.sourceAccountNumber && this.targetAccountNumber && this.amount > 0) {
@@ -38,14 +38,14 @@ export class FundTransferComponent {
   }
 
   loadTransactionHistory(): void {
-    this.transactionService.getTransactionHistory(this.sourceAccountNumber).subscribe(
-      (data) => {
+    this.transactionService.getTransactionHistory(this.sourceAccountNumber).subscribe({
+      next: (data) => {
         this.transactions = data;
       },
-      (error) => {
+      error: (error) => {
         alert('Failed to load transaction history.');
       }
-    );
+    });
   }
 
   // sourceAccountNumber: string = '';
