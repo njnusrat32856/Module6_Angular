@@ -23,6 +23,9 @@ import { LoginComponent } from './reg-login/login/login.component';
 import { RegisterComponent } from './reg-login/register/register.component';
 import { LogoutComponent } from './reg-login/logout/logout.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AboutComponent } from './shared/about/about.component';
+import { ServicesFaqsComponent } from './shared/services-faqs/services-faqs.component';
+import { ContactComponent } from './shared/contact/contact.component';
 
 
 @NgModule({
@@ -46,7 +49,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     RegisterComponent,
     LogoutComponent,
     ProfileComponent,
-    
+    AboutComponent,
+    ServicesFaqsComponent,
+    ContactComponent
     
   ],
   imports: [
