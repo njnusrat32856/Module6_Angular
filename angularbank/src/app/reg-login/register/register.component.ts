@@ -12,6 +12,7 @@ import { UserModel } from '../../model/user.model';
 export class RegisterComponent {
 
   regForm !: FormGroup;
+  // loginForm!: FormGroup;
 
   constructor(
     private userService: AuthService,
@@ -21,8 +22,12 @@ export class RegisterComponent {
     this.regForm = this.builder.group({
       userName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
-    })
+      password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(9)]]
+    });
+    // this.loginForm = this.builder.group({
+    //   email: [''],
+    //   password: ['']
+    // });
   }
 
   onSubmit(): void {
@@ -45,5 +50,24 @@ export class RegisterComponent {
       alert('Complte mandatory Field');
     }
   }
+
+  // onLoinSubmit(): void {
+    
+  //   if (this.loginForm.valid) {
+  //     const credentials = this.loginForm.value;
+  //     this.userService.login(credentials).subscribe({
+  //       next: res => {
+  //         console.log('User Logged in Successfully:', res);
+
+  //         this.userService.storeToken(res.token);
+  //         const role = this.userService.getUserRole();
+  //         this.router.navigate(['profile']);
+  //       },
+  //       error: err => {
+  //         console.error('Error logging in:', err)
+  //       }
+  //     });
+  //   }
+  // }
 
 }

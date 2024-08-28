@@ -21,6 +21,8 @@ import { LoanListComponent } from './components/loan-list/loan-list.component';
 import { LoanPaymentComponent } from './components/loan-payment/loan-payment.component';
 import { LoginComponent } from './reg-login/login/login.component';
 import { RegisterComponent } from './reg-login/register/register.component';
+import { LogoutComponent } from './reg-login/logout/logout.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import { RegisterComponent } from './reg-login/register/register.component';
     LoanPaymentComponent,
     LoginComponent,
     RegisterComponent,
+    LogoutComponent,
+    ProfileComponent,
     
     
   ],

@@ -2,16 +2,16 @@
   "users": [
     {
       "id": "1",
-      "userName": "John Doe",
-      "email": "johndoe@example.com",
-      "password": "hashedpassword123",
+      "userName": "Nusrat Jahan",
+      "email": "nusrat@gmail.com",
+      "password": "12345",
       "role": "user"
     },
     {
       "id": "2",
       "userName": "Jane Smith",
       "email": "janesmith@example.com",
-      "password": "hashedpassword456",
+      "password": "56789",
       "role": "admin"
     }
   ],

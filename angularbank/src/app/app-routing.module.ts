@@ -12,32 +12,90 @@ import { LoanApplicationComponent } from './components/loan-application/loan-app
 import { LoanDetailsComponent } from './components/loan-details/loan-details.component';
 import { LoanListComponent } from './components/loan-list/loan-list.component';
 import { LoanPaymentComponent } from './components/loan-payment/loan-payment.component';
+import { RegisterComponent } from './reg-login/register/register.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AuthGuard } from './reg-login/guard/auth.guard';
+import { LoginComponent } from './reg-login/login/login.component';
+import { RoleGuard } from './reg-login/guard/role.guard';
+import { LogoutComponent } from './reg-login/logout/logout.component';
+import { AboutComponent } from './shared/about/about.component';
+import { ServicesFaqsComponent } from './shared/services-faqs/services-faqs.component';
+import { ContactComponent } from './shared/contact/contact.component';
 
 
 const routes: Routes = [
-  { path: 'create-account', component: AccountFormComponent },
-  { path: 'viewaccounts', component: AccountViewComponent },
-  { path: 'accounts', component: AccountListComponent },
-  { 
-    path: 'transHistory/:accountNumber', component: TransactionHistoryComponent 
+  {
+    path: 'create-account', component: AccountFormComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'user' }
   },
   {
-    path: 'deposit', component: DepositComponent
+    path: 'viewaccounts', component: AccountViewComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'admin' }
   },
   {
-    path: 'withdraw', component: WithdrawComponent
+    path: 'accounts', component: AccountListComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'user' }
   },
   {
-    path: 'fundtrasfer', component: FundTransferComponent
+    path: 'transHistory/:accountNumber', component: TransactionHistoryComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'user' }
   },
   {
-    path: 'transactionlist', component: TransactionListComponent
+    path: 'deposit', component: DepositComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'user' }
   },
-  { path: 'applyloan', component: LoanApplicationComponent},
-  { path: 'loandetails/:id', component: LoanDetailsComponent },
-  { path: 'loanpayment/:id', component: LoanPaymentComponent },
   {
-    path: 'loans', component: LoanListComponent
+    path: 'withdraw', component: WithdrawComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'user' }
+  },
+  {
+    path: 'fundtrasfer', component: FundTransferComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'user' }
+  },
+  {
+    path: 'transactionlist', component: TransactionListComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'admin' }
+  },
+  {
+    path: 'applyloan', component: LoanApplicationComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'user' }
+  },
+  {
+    path: 'loandetails/:id', component: LoanDetailsComponent, canActivate: [AuthGuard, RoleGuard],
+    data: {role: 'user'}
+  },
+  {
+    path: 'loanpayment/:id', component: LoanPaymentComponent, canActivate: [AuthGuard, RoleGuard],
+    data: {role: 'user'}
+  },
+  {
+    path: 'loans', component: LoanListComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'user' }
+  },
+  {
+    path: 'register', component: RegisterComponent
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: 'logout', component: LogoutComponent
+  },
+  {
+    path: 'profile', component: ProfileComponent, canActivate: [AuthGuard, RoleGuard],
+    data: {role: ['user', 'admin']}
+  },
+  {
+    path: '', redirectTo: 'login', pathMatch: 'full'
+  },
+  {
+    path: 'about', component: AboutComponent
+  },
+  {
+    path: 'service', component: ServicesFaqsComponent
+  },
+  {
+    path: 'contact', component: ContactComponent
   }
 ];
 
