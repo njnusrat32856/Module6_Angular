@@ -8,27 +8,27 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 })
 export class LoanService {
 
-  private apiUrl = 'http://localhost:3000/loans';  
+  private baseUrl = 'http://localhost:3000/loans';  
 
   constructor(
     private http: HttpClient
   ) {}
 
   getAllLoans(): Observable<Loan[]> {
-    return this.http.get<Loan[]>(this.apiUrl).pipe(
+    return this.http.get<Loan[]>(this.baseUrl).pipe(
       catchError(this.handleError)
     );
   }
 
   
   createLoan(loan: Loan): Observable<Loan> {
-    return this.http.post<Loan>(this.apiUrl, loan).pipe(
+    return this.http.post<Loan>(this.baseUrl, loan).pipe(
       catchError(this.handleError)
     );
   }
 
   getLoanById(id: string): Observable<Loan> {
-    return this.http.get<Loan>(`${this.apiUrl}/${id}`).pipe(
+    return this.http.get<Loan>(`${this.baseUrl}/${id}`).pipe(
       catchError(this.handleError)
     );
   }
@@ -43,14 +43,14 @@ export class LoanService {
 
   // Method to update a loan
   updateLoan(loan: Loan): Observable<Loan> {
-    return this.http.put<Loan>(`${this.apiUrl}/${loan.id}`, loan).pipe(
+    return this.http.put<Loan>(`${this.baseUrl}/${loan.id}`, loan).pipe(
       catchError(this.handleError)
     );
   }
 
   // Method to delete a loan
   deleteLoan(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`).pipe(
+    return this.http.delete<void>(`${this.baseUrl}/${id}`).pipe(
       catchError(this.handleError)
     );
   }

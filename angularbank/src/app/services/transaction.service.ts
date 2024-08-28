@@ -8,19 +8,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TransactionService {
 
-  private apiUrl = 'http://localhost:3000/transactions';
+  private baseUrl = 'http://localhost:3000/transactions';
 
   constructor(
     private http: HttpClient
   ) {}
 
   getAllTransactions(): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(this.apiUrl);
+    return this.http.get<Transaction[]>(this.baseUrl);
   }
 
   
   getTransactionHistory(accountNumber: string): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(`${this.apiUrl}?accountNumber=${accountNumber}`);
+    return this.http.get<Transaction[]>(`${this.baseUrl}?accountNumber=${accountNumber}`);
   }
 
   // Method to make a deposit
@@ -33,7 +33,7 @@ export class TransactionService {
       date: new Date(),
       description: 'Deposit'
     };
-    return this.http.post<Transaction>(this.apiUrl, transaction);
+    return this.http.post<Transaction>(this.baseUrl, transaction);
   }
 
   // Method to make a withdrawal
@@ -46,13 +46,13 @@ export class TransactionService {
       date: new Date(),
       description: 'Withdraw'
     };
-    return this.http.post<Transaction>(this.apiUrl, transaction);
+    return this.http.post<Transaction>(this.baseUrl, transaction);
   }
 
 
   // Create a new transaction
   createFundTransaction(transaction: Transaction): Observable<Transaction> {
-    return this.http.post<Transaction>(this.apiUrl, transaction);
+    return this.http.post<Transaction>(this.baseUrl, transaction);
   }
 
   

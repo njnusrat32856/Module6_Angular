@@ -8,28 +8,28 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AccountService {
 
-  private apiUrl = 'http://localhost:3000/accounts';
+  private baseUrl = 'http://localhost:3000/accounts';
 
   constructor(private http: HttpClient) {}
 
   getAccounts(): Observable<Account[]> {
-    return this.http.get<Account[]>(this.apiUrl);
+    return this.http.get<Account[]>(this.baseUrl);
   }
 
   getAccountById(aid: string): Observable<Account> {
-    return this.http.get<Account>(`${this.apiUrl}/${aid}`);
+    return this.http.get<Account>(`${this.baseUrl}/${aid}`);
   }
 
   createAccount(account: Account): Observable<Account> {
-    return this.http.post<Account>(this.apiUrl, account);
+    return this.http.post<Account>(this.baseUrl, account);
   }
 
   updateAccount(account: Account): Observable<Account> {
-    return this.http.put<Account>(`${this.apiUrl}/${account.aid}`, account);
+    return this.http.put<Account>(`${this.baseUrl}/${account.aid}`, account);
   }
 
   deleteAccount(aid: string): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${aid}`);
+    return this.http.delete<void>(`${this.baseUrl}/${aid}`);
   }
 
   generateAccountNumber(): string {
