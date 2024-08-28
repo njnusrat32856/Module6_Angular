@@ -1,15 +1,15 @@
 {
-  "user": [
+  "users": [
     {
       "id": "1",
-      "name": "John Doe",
+      "userName": "John Doe",
       "email": "johndoe@example.com",
       "password": "hashedpassword123",
       "role": "user"
     },
     {
       "id": "2",
-      "name": "Jane Smith",
+      "userName": "Jane Smith",
       "email": "janesmith@example.com",
       "password": "hashedpassword456",
       "role": "admin"

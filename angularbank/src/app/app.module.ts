@@ -19,6 +19,8 @@ import { LoanApplicationComponent } from './components/loan-application/loan-app
 import { LoanDetailsComponent } from './components/loan-details/loan-details.component';
 import { LoanListComponent } from './components/loan-list/loan-list.component';
 import { LoanPaymentComponent } from './components/loan-payment/loan-payment.component';
+import { LoginComponent } from './reg-login/login/login.component';
+import { RegisterComponent } from './reg-login/register/register.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { LoanPaymentComponent } from './components/loan-payment/loan-payment.com
     LoanDetailsComponent,
     LoanListComponent,
     LoanPaymentComponent,
+    LoginComponent,
+    RegisterComponent,
     
     
   ],
