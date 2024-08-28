@@ -13,31 +13,6 @@
       "email": "janesmith@example.com",
       "password": "hashedpassword456",
       "role": "admin"
-    },
-    {
-      "id": "ff95",
-      "email": "johndoe@example.com",
-      "password": "hedpassword123"
-    },
-    {
-      "id": "3513",
-      "email": "johndoe@example.com",
-      "password": "hashedpassword123"
-    },
-    {
-      "id": "bee4",
-      "email": "johndoe@example.com",
-      "password": "hashedpassword123"
-    },
-    {
-      "id": "55ad",
-      "email": "janesmith@example.com",
-      "password": "hashedpassword456"
-    },
-    {
-      "id": "bfb0",
-      "email": "janesmith@example.com",
-      "password": "hashedpassword456"
     }
   ],
   "account": [

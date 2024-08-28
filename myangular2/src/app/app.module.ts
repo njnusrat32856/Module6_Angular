@@ -28,6 +28,7 @@ import { LoanApplicationComponent } from './employee/loan-application/loan-appli
 import { EmployeeProfileComponent } from './employee/employee-profile/employee-profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { RegisterComponent } from './components/register/register.component';
     LoanApplicationComponent,
     EmployeeProfileComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

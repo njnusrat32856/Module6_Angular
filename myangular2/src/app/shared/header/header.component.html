@@ -12,7 +12,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
           </li>
-          <ng-container *ngIf="userRole === 'admin'">
+          <ng-container *ngIf="userRole === 'user'">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Loan
@@ -25,20 +25,23 @@
               </ul>
             </li>
           </ng-container>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Other Services
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
+          
+          <ng-container *ngIf="userRole === 'admin'">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Other Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ng-container>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact Us</a>
           </li>
@@ -55,7 +58,7 @@
               
               <li><a class="dropdown-item" href="#">Account Details</a></li>
               <li><a class="dropdown-item" href="#">Transaction History</a></li>
-              <li><a class="dropdown-item" href="/login">Logout</a></li>
+              <li><a class="dropdown-item" href="/logout">Logout</a></li>
               <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
             </ul>
           </div>
