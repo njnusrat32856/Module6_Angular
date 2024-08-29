@@ -53,7 +53,7 @@ export class AuthService {
     )
   }
 
-  private get currentUserValue(): UserModel | null {
+  public get currentUserValue(): UserModel | null {
     return this.currentUserSubject.value;
   }
 
