@@ -21,6 +21,7 @@ import { LogoutComponent } from './reg-login/logout/logout.component';
 import { AboutComponent } from './shared/about/about.component';
 import { ServicesFaqsComponent } from './shared/services-faqs/services-faqs.component';
 import { ContactComponent } from './shared/contact/contact.component';
+import { AccountDetailsComponent } from './components/account-details/account-details.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'viewaccounts', component: AccountViewComponent, canActivate: [AuthGuard, RoleGuard],
     data: { role: 'admin' }
+  },
+  {
+    path: 'account-details/:aid', component: AccountDetailsComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'user'}
   },
   {
     path: 'accounts', component: AccountListComponent, canActivate: [AuthGuard, RoleGuard],

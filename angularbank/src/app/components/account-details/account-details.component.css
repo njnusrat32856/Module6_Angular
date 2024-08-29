@@ -1,0 +1,51 @@
+.account-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .account-details-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+  
+  .account-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .account-header {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  
+  .account-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #007bff;
+  }
+  
+  .account-header p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #6c757d;
+  }
+  
+  .account-body p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #495057;
+  }
+  
+  .account-body p strong {
+    color: #343a40;
+  }
+  

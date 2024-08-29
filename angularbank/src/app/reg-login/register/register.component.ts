@@ -22,7 +22,8 @@ export class RegisterComponent {
     this.regForm = this.builder.group({
       userName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(9)]]
+      password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(9)]],
+      role: ['user']
     });
     // this.loginForm = this.builder.group({
     //   email: [''],

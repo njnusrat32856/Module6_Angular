@@ -5,9 +5,9 @@
       <tr>
         <th>Account Number</th>
         <th>Name</th> -->
-        <!-- <th>Last Name</th> -->
-        <!-- <th>Gender</th> -->
-        <!-- <th>Email</th>
+<!-- <th>Last Name</th> -->
+<!-- <th>Gender</th> -->
+<!-- <th>Email</th>
         <th>Address</th>
         <th>Cell</th>
         <th>NID</th>
@@ -21,9 +21,9 @@
       <tr *ngFor="let account of accounts" [class.inactive]="!account.status">
         <td>{{ account.accountNumber }}</td>
         <td>{{ account.firstName }} {{ account.lastName }}</td> -->
-        <!-- <td>{{ account.lastName }}</td> -->
-        <!-- <td>{{ account.gender }}</td> -->
-        <!-- <td>{{ account.email }}</td>
+<!-- <td>{{ account.lastName }}</td> -->
+<!-- <td>{{ account.gender }}</td> -->
+<!-- <td>{{ account.email }}</td>
         <td>{{ account.address }}</td>
         <td>{{ account.cell }}</td>
         <td>{{ account.nid }}</td>
@@ -40,7 +40,7 @@
 <div class="account-list-container">
   <h2>Account List</h2>
   <div class="account-list">
-    <div class="account-card" *ngFor="let account of accounts" >
+    <div class="account-card" *ngFor="let account of accounts">
       <div class="account-header">
         <h3>{{ account.firstName }} {{ account.lastName }}</h3>
         <p>{{ account.accountNumber }}</p>
@@ -54,9 +54,9 @@
         <p><strong>Balance:</strong> {{ account.currentBalance | currency }}</p>
         <p><strong>Created On:</strong> {{ account.creatingDate | date }}</p>
         <p><strong>Status:</strong> {{ account.status ? 'Active' : 'Inactive' }}</p>
-        <!-- <button  (click)="viewTransactions(account.accountNumber)">View Transactions</button> -->
+        <button *ngIf="!account.status" (click)="approveAccount(account)">Approve</button>
+        <button (click)="viewTransactions(account.accountNumber)">View Transactions</button>
       </div>
     </div>
   </div>
 </div>
-v

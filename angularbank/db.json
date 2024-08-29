@@ -10,7 +10,7 @@
     {
       "id": "2",
       "userName": "Jane Smith",
-      "email": "janesmith@example.com",
+      "email": "jane@example.com",
       "password": "56789",
       "role": "admin"
     }
@@ -21,7 +21,7 @@
       "accountNumber": "9971002216",
       "firstName": "Nusrat",
       "lastName": "Jahan",
-      "email": "n.j.naima222@gmail.com",
+      "email": "nusrat@gmail.com",
       "cell": "1234555",
       "nid": "432423",
       "accountType": "Savings",

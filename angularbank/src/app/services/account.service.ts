@@ -16,8 +16,8 @@ export class AccountService {
     return this.http.get<Account[]>(this.baseUrl);
   }
 
-  getAccountById(aid: string): Observable<Account> {
-    return this.http.get<Account>(`${this.baseUrl}/${aid}`);
+  getAccountById(accountNumber: string): Observable<Account> {
+    return this.http.get<Account>(`${this.baseUrl}/${accountNumber}`);
   }
 
   createAccount(account: Account): Observable<Account> {
@@ -41,6 +41,22 @@ export class AccountService {
       result += randomNumbers.charAt(Math.floor(Math.random() * randomNumbers.length));
     }
     return result;
+  }
+
+  getAccountsByUser(userId: string): Observable<Account> {
+    return this.http.get<Account>(`${this.baseUrl}/${userId}`);
+  }
+
+  createOrUpdateAccount(account: Account): Observable<Account> {
+    if (account.accountNumber) {
+      return this.http.put<Account>(`${this.baseUrl}/${account.accountNumber}`, account);
+    } else {
+      return this.http.post<Account>(this.baseUrl, account);
+    }
+  }
+
+  updateAccountBalance(accountId: string, amount: number): Observable<Account> {
+    return this.http.patch<Account>(`${this.baseUrl}/${accountId}`, { currentBalance: amount });
   }
 
   

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { UserModel } from '../../model/user.model';
 import { ProfileService } from '../../services/profile.service';
+import { Account } from '../../model/account.model';
+import { AccountService } from '../../services/account.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,9 +12,11 @@ import { ProfileService } from '../../services/profile.service';
 export class ProfileComponent {
 
   user!: UserModel;
+  account !: Account;
 
   constructor(
-    private profileService: ProfileService
+    private profileService: ProfileService,
+    private accountService: AccountService
   ) {}
 
   ngOnInit(): void {
@@ -24,6 +28,7 @@ export class ProfileComponent {
       next: user => {
         if (user) {
           this.user = user;
+          
         }
       },
       error: err => {

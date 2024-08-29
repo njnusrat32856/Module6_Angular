@@ -26,6 +26,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './shared/about/about.component';
 import { ServicesFaqsComponent } from './shared/services-faqs/services-faqs.component';
 import { ContactComponent } from './shared/contact/contact.component';
+import { AccountDetailsComponent } from './components/account-details/account-details.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ContactComponent } from './shared/contact/contact.component';
     ProfileComponent,
     AboutComponent,
     ServicesFaqsComponent,
-    ContactComponent
+    ContactComponent,
+    AccountDetailsComponent
     
   ],
   imports: [

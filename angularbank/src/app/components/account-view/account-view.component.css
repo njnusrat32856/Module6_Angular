@@ -1,149 +1,93 @@
 .account-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
   background-color: #f8f9fa;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
-  margin: 50px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.account-list-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
-  font-family: 'Arial', sans-serif;
+  color: #343a40;
 }
 
 .account-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .account-card {
-  background-color: white;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
 .account-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .account-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
   margin-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .account-header h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 1.5em;
   color: #007bff;
 }
 
 .account-header p {
-  margin: 0;
-  font-size: 14px;
-  color: #999;
+  margin: 5px 0 0;
+  font-size: 0.9em;
+  color: #6c757d;
 }
 
 .account-body p {
-  margin: 8px 0;
-  font-size: 14px;
-  color: #555;
+  margin: 10px 0;
+  font-size: 1em;
+  color: #495057;
 }
 
-.account-card.active {
-  border-left: 4px solid #28a745;
+.account-body p strong {
+  color: #343a40;
 }
 
-.account-card.inactive {
-  border-left: 4px solid #dc3545;
-  background-color: #f8d7da;
-  color: #721c24;
-}
-
-button {
+.account-body button {
+  display: block;
   width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  color: white;
+  padding: 10px;
+  margin-top: 10px;
   border: none;
-  border-radius: 4px;
-  font-size: 18px;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #28a745;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s;
 }
 
-button:hover {
+.account-body button:hover {
+  background-color: #218838;
+}
+
+.account-body button:nth-child(2) {
+  background-color: #007bff;
+}
+
+.account-body button:nth-child(2):hover {
   background-color: #0056b3;
 }
 
-
-/* .account-view-container {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1000px;
-  margin: 20px auto;
+@media (max-width: 768px) {
+  .account-list {
+    grid-template-columns: 1fr;
+  }
 }
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #007bff;
-  font-family: 'Arial', sans-serif;
-}
-
-.account-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: 'Arial', sans-serif;
-}
-
-.account-table thead {
-  background-color: #007bff;
-  color: #ffffff;
-}
-
-.account-table th,
-.account-table td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-.account-table th {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 14px;
-}
-
-.account-table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.account-table tbody tr:hover {
-  background-color: #e9ecef;
-  cursor: pointer;
-}
-
-.account-table tbody tr.inactive {
-  background-color: #ffcccc;
-}
-
-.account-table tbody tr td {
-  color: #333;
-}
-
-.account-table tbody tr td.inactive {
-  color: #777;
-} */
