@@ -11,24 +11,49 @@ import { TransactionService } from '../../services/transaction.service';
 export class TransactionHistoryComponent implements OnInit {
   accountNumber!: string;
   transactions: Transaction[] = [];
+  totalAmount: number = 0;
 
   constructor(
     private route: ActivatedRoute,
     private transactionService: TransactionService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.accountNumber = this.route.snapshot.paramMap.get('accountNumber')!;
     // this.loadTransactionHistory();
     if (this.accountNumber) {
-      this.loadTransactions(this.accountNumber);
+      // this.loadTransactions(this.accountNumber);
+      this.loadTransactionsAndCalculateTotal(this.accountNumber);
     }
+
   }
 
-  loadTransactions(accountNumber: string): void {
-    this.transactionService.getTransactionHistory(accountNumber).subscribe((data) => {
-      this.transactions = data;
+  // loadTransactions(accountNumber: string): void {
+  //   this.transactionService.getTransactionHistory(accountNumber).subscribe((data) => {
+  //     this.transactions = data;
+  //   });
+
+  loadTransactionsAndCalculateTotal(accountNumber: string): void {
+    this.transactionService.getTransactionHistory(accountNumber).subscribe({
+      next: (data) => {
+        this.transactions = data;
+        this.calculateTotalAmount();
+      },
+      error: (error) => {
+        alert('Failed to load transactions.');
+      }
     });
+  }
+
+  calculateTotalAmount(): void {
+    this.totalAmount = this.transactions.reduce((total, transaction) => {
+      if (transaction.type === 'Deposit') {
+        return total + transaction.amount;
+      } else if (transaction.type === 'Withdraw' || transaction.type === 'Transfer') {
+        return total - transaction.amount;
+      }
+      return total;
+    }, 0);
   }
 
   // loadTransactionHistory(): void {

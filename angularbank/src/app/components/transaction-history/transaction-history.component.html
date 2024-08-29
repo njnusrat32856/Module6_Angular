@@ -17,7 +17,15 @@
         <td>{{ transaction.amount | currency }}</td>
 
       </tr>
-      <button routerLink="/accounts">GO Back to Account List</button>
     </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3"><strong>Total Amount</strong></td>
+        <td><strong>{{ totalAmount | currency }}</strong></td>
+      </tr>
+    </tfoot>
+
+    <button routerLink="/accounts">GO Back to Account List</button>
+
   </table>
 </div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Transaction } from '../model/transaction.model';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -29,7 +29,7 @@ export class TransactionService {
       tid: this.generateUniqueId(),
       accountNumber,
       type: 'Deposit',
-      amount,
+      amount: amount,
       date: new Date(),
       description: 'Deposit'
     };
@@ -42,7 +42,7 @@ export class TransactionService {
       tid: this.generateUniqueId(),
       accountNumber,
       type: 'Withdraw',
-      amount,
+      amount: -amount,
       date: new Date(),
       description: 'Withdraw'
     };
@@ -61,6 +61,23 @@ export class TransactionService {
   private generateUniqueId(): string {
     return Math.random().toString(36).substr(2, 6);
   }
+
+  // calculateTotalAmount(accountNumber: string): Observable<number> {
+  //   return this.getTransactionHistory(accountNumber).pipe(
+  //     map(transactions => {
+  //       return transactions.reduce((total, transaction) => {
+  //         if (transaction.type === 'Deposit') {
+  //           return total + transaction.amount;  // Add deposit amount
+  //         } else if (transaction.type === 'Transfer' || transaction.type === 'Withdraw') {
+  //           return total - transaction.amount;  // Subtract transfer out or withdrawal amount
+  //         }
+  //         return total;
+  //       }, 0);
+  //     })
+  //   );
+  // }
+
+  
 
 
   // Method to transfer funds
