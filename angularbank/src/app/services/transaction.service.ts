@@ -57,51 +57,10 @@ export class TransactionService {
 
   
 
-  // Utility method to generate unique IDs
+  
   private generateUniqueId(): string {
-    return Math.random().toString(36).substr(2, 6);
+    return Math.random().toString(36).substr( 2, 6);
   }
 
-  // calculateTotalAmount(accountNumber: string): Observable<number> {
-  //   return this.getTransactionHistory(accountNumber).pipe(
-  //     map(transactions => {
-  //       return transactions.reduce((total, transaction) => {
-  //         if (transaction.type === 'Deposit') {
-  //           return total + transaction.amount;  // Add deposit amount
-  //         } else if (transaction.type === 'Transfer' || transaction.type === 'Withdraw') {
-  //           return total - transaction.amount;  // Subtract transfer out or withdrawal amount
-  //         }
-  //         return total;
-  //       }, 0);
-  //     })
-  //   );
-  // }
-
   
-
-
-  // Method to transfer funds
-  // transfer(sourceAccountNumber: string, targetAccountNumber: string, amount: number): Observable<Transaction[]> {
-  //   const sourceTransaction: Transaction = {
-  //     tid: this.generateUniqueId(),
-  //     accountNumber: sourceAccountNumber,
-  //     type: 'Transfer',
-  //     amount,
-  //     date: new Date(),
-  //     description: `Transfer to ${targetAccountNumber}`,
-  //     targetAccountNumber
-  //   };
-
-  //   const targetTransaction: Transaction = {
-  //     tid: this.generateUniqueId(),
-  //     accountNumber: targetAccountNumber,
-  //     type: 'Transfer',
-  //     amount,
-  //     date: new Date(),
-  //     description: `Transfer from ${sourceAccountNumber}`,
-  //     targetAccountNumber: sourceAccountNumber
-  //   };
-
-  //   return this.http.post<Transaction[]>(this.apiUrl, [sourceTransaction, targetTransaction]);
-  // }
 }
