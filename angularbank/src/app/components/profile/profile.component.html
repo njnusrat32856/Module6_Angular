@@ -1,11 +1,11 @@
 <!-- <app-header></app-header> -->
-<div class="container">
+<!-- <div class="container">
     <h2>Welcome, {{ user.userName }}!</h2>
     <div *ngIf="user">
-        <!-- <p><strong>Name:</strong> {{ user.userName }}</p> -->
+        <p><strong>Name:</strong> {{ user.userName }}</p>
         <p><strong>Email:</strong> {{ user.email }}</p>
-        <!-- <p><strong>Role:</strong> {{ user.role }}</p> -->
-        <!-- <a [routerLink]="['/account-details', account.accountNumber]">View Details</a> -->
+        <p><strong>Role:</strong> {{ user.role }}</p>
+        <a [routerLink]="['/account-details', account.accountNumber]">View Details</a>
 
         
     </div>
@@ -13,6 +13,18 @@
     <div *ngIf="!user">
         <p>Loading user profile...</p>
     </div>
-</div>
+</div> -->
 
 <!-- <app-footer></app-footer> -->
+
+<div class="container">
+    <h2>Welcome, {{ user.userName }}!</h2>
+    
+    <div *ngIf="user" class="user-details">
+        <p><strong>Email:</strong> {{ user.email }}</p>
+    </div>
+    
+    <div *ngIf="!user" class="loading-message">
+        <p>Loading user profile...</p>
+    </div>
+</div>
