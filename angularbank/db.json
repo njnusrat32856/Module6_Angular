@@ -210,6 +210,24 @@
       "date": "2024-08-27T19:12:18.922Z",
       "description": "Transfer to 0234234325",
       "targetAccountNumber": "0234234325"
+    },
+    {
+      "id": "313c",
+      "tid": "bwsdeq",
+      "accountNumber": "9971002216",
+      "type": "Deposit",
+      "amount": 50000,
+      "date": "2024-08-30T18:21:30.603Z",
+      "description": "Deposit"
+    },
+    {
+      "id": "0cc9",
+      "tid": "7qvykt",
+      "accountNumber": "9971002216",
+      "type": "Withdraw",
+      "amount": -1000,
+      "date": "2024-08-30T18:21:43.172Z",
+      "description": "Withdraw"
     }
   ],
   "loans": [

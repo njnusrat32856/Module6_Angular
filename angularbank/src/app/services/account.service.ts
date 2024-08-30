@@ -43,9 +43,12 @@ export class AccountService {
     return result;
   }
 
-  getAccountsByUser(userId: string): Observable<Account> {
-    return this.http.get<Account>(`${this.baseUrl}/${userId}`);
+  getAccountsByUser(userId: string): Observable<Account[]> {
+    return this.http.get<Account[]>(`${this.baseUrl}?userId=${userId}`);
   }
+  // getAccountsByUser(userId: string): Observable<Account> {
+  //   return this.http.get<Account>(`${this.baseUrl}/${userId}`);
+  // }
 
   createOrUpdateAccount(account: Account): Observable<Account> {
     if (account.accountNumber) {

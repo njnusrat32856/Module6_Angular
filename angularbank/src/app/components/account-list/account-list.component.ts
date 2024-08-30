@@ -29,4 +29,8 @@ export class AccountListComponent implements OnInit {
   viewTransactions(accountNumber: string): void {
     this.router.navigate(['/transHistory', accountNumber]);
   }
+  approveAccount(account: Account): void {
+    account.status = true;
+    this.accountService.updateAccount(account).subscribe();
+  }
 }

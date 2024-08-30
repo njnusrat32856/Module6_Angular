@@ -31,15 +31,15 @@ const routes: Routes = [
   },
   {
     path: 'viewaccounts', component: AccountViewComponent, canActivate: [AuthGuard, RoleGuard],
-    data: { role: 'admin' }
+    data: { role: 'user' }
   },
   {
     path: 'account-details/:aid', component: AccountDetailsComponent, canActivate: [AuthGuard, RoleGuard],
     data: { role: 'user'}
   },
   {
-    path: 'accounts', component: AccountListComponent, canActivate: [AuthGuard, RoleGuard],
-    data: { role: 'user' }
+    path: 'accountlist', component: AccountListComponent, canActivate: [AuthGuard, RoleGuard],
+    data: { role: 'admin' }
   },
   {
     path: 'transHistory/:accountNumber', component: TransactionHistoryComponent, canActivate: [AuthGuard, RoleGuard],
