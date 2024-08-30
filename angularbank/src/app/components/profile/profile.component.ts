@@ -36,4 +36,13 @@ export class ProfileComponent {
       }
     });
   }
+  loadAccountDetails(accountNumber: string): void {
+    this.accountService.getAccountById(accountNumber).subscribe(
+      data => {
+        if (data) {
+          this.account = data;
+        }
+      }
+    )
+  }
 }

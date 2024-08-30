@@ -1,13 +1,13 @@
 <!-- <app-header></app-header> -->
 <div class="container">
-    <h2>Welcome to BmsBank {{ user.userName }}!</h2>
+    <h2>Welcome, {{ user.userName }}!</h2>
     <div *ngIf="user">
         <!-- <p><strong>Name:</strong> {{ user.userName }}</p> -->
         <p><strong>Email:</strong> {{ user.email }}</p>
         <!-- <p><strong>Role:</strong> {{ user.role }}</p> -->
-        <!-- <a [routerLink]="['/account-details', account.accountNumber]">View Details</a> -->
+        <a [routerLink]="['/account-details', account.accountNumber]">View Details</a>
 
-        <!-- Add more fields as needed -->
+        
     </div>
     
     <div *ngIf="!user">
