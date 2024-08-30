@@ -31,7 +31,7 @@ export class AccountFormComponent {
       next: res => {
         console.log(res);
         
-        this.router.navigate(['accounts']);
+        this.router.navigate(['viewaccounts']);
       }
     });
   }
