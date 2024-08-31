@@ -4,6 +4,8 @@ import { Account } from '../../model/account.model';
 import { Router } from '@angular/router';
 import { UserModel } from '../../model/user.model';
 import { AuthService } from '../../services/auth.service';
+import { Transaction } from '../../model/transaction.model';
+import { TransactionService } from '../../services/transaction.service';
 
 @Component({
   selector: 'app-account-view',
@@ -14,11 +16,13 @@ export class AccountViewComponent implements OnInit {
 
   user!: UserModel | null;
   account!: Account | null;
+  transactions: Transaction[] = [];
 
   constructor(
     private authService: AuthService,
     private router: Router,
-    private accountService: AccountService
+    private accountService: AccountService,
+    private transactionService: TransactionService
   ) { }
 
   ngOnInit(): void {
@@ -33,6 +37,7 @@ export class AccountViewComponent implements OnInit {
       next: (accounts) => {
         if (accounts && accounts.length > 0) {
           this.account = accounts[0];  // Assuming the user has only one account
+          this.loadTransactionHistory(this.account.accountNumber);
         } else {
           this.account = null;
         }
@@ -42,6 +47,34 @@ export class AccountViewComponent implements OnInit {
         this.account = null;
       }
     });
+  }
+
+  loadTransactionHistory(accountNumber: string): void {
+    this.transactionService.getTransactionHistory(accountNumber).subscribe({
+      next: (transactions) => {
+        this.transactions = transactions;
+        this.calculateCurrentBalance();
+      },
+      error: (error) => {
+        console.error('Failed to load transaction history', error);
+      }
+    });
+  }
+
+  calculateCurrentBalance(): void {
+    if (this.account) {
+      this.account.currentBalance = this.transactions.reduce((total, transaction) => {
+        if (transaction.type === 'Deposit') {
+          return total + transaction.amount;
+        } else if (transaction.type === 'Withdraw' || transaction.type === 'Transfer') {
+          return total - transaction.amount;
+        }
+        return total;
+        
+        
+        // return total - transaction.amount;
+      }, 0);
+    }
   }
 
   // accounts: Account[] = [];
