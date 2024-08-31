@@ -9,7 +9,7 @@
     <p><strong>Cell:</strong> {{ account.cell }}</p>
     <p><strong>NID:</strong> {{ account.nid }}</p>
     <p><strong>Account Type:</strong> {{ account.accountType }}</p>
-    <p><strong>Balance:</strong> {{ account.currentBalance | currency }}</p>
+    <p><strong>Balance:</strong> {{ account.currentBalance | currency }} </p>
     <p><strong>Status:</strong> {{ account.status ? 'Active' : 'Inactive' }}</p>
     <button (click)="viewTransactions(account.accountNumber)">View Transactions</button>
   </div>
