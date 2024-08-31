@@ -15,16 +15,16 @@ export class AccountFormComponent {
   constructor(private accountService: AccountService,
     private router: Router
   ) {
-    this.account.aid = this.generateUniqueId();
+    // this.account.id = this.generateUniqueId();
     this.account.accountNumber = this.accountService.generateAccountNumber();
     this.account.creatingDate = new Date();
     this.account.currentBalance = 0;
     this.account.status = false;
   }
 
-  generateUniqueId(): string {
-    return Math.random().toString(36).substr(2, 9);
-  }
+  // generateUniqueId(): string {
+  //   return Math.random().toString(36).substr(2, 4);
+  // }
 
   onSubmit() {
     this.accountService.createAccount(this.account).subscribe({

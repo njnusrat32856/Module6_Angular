@@ -19,17 +19,17 @@ export class AuthService {
     private http: HttpClient,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    const storedUser = this.IsBrower() ? JSON.parse(localStorage.getItem('currentUser') || 'null') : null;
+    const storedUser = this.isBrowser() ? JSON.parse(localStorage.getItem('currentUser') || 'null') : null;
     this.currentUserSubject = new BehaviorSubject<UserModel | null>(storedUser);
     this.currentUser$ = this.currentUserSubject.asObservable();
    }
 
-  private IsBrower(): boolean {
+  private isBrowser(): boolean {
     return isPlatformBrowser(this.platformId);
   }
 
   getToken(): string | null {
-    return this.IsBrower() ? localStorage.getItem('token') : null;
+    return this.isBrowser() ? localStorage.getItem('token') : null;
   }
 
   isAuthenticated(): boolean {
@@ -62,7 +62,7 @@ export class AuthService {
   }
 
   private setCurrentUser(user: UserModel): void {
-    if (this.IsBrower()) {
+    if (this.isBrowser()) {
       localStorage.setItem('currentUser', JSON.stringify(user));
     }
     this.currentUserSubject.next(user);
@@ -109,7 +109,7 @@ export class AuthService {
   }
 
   private clearCurrentUser(): void {
-    if (this.IsBrower()) {
+    if (this.isBrowser()) {
       localStorage.removeItem('currentUser');
     }
     this.currentUserSubject.next(null);
@@ -117,14 +117,20 @@ export class AuthService {
 
   logout(): void {
     this.clearCurrentUser();
-    if (this.IsBrower()) {
+    if (this.isBrowser()) {
       localStorage.removeItem('token');
 
     }
   }
   
-  removeUserDetails() {
-    localStorage.clear();
+  // removeUserDetails() {
+  //   localStorage.clear();
+  // }
+
+  removeUserDetails(): void {
+    if (this.isBrowser()) {
+      localStorage.clear();
+    }
   }
 
 }

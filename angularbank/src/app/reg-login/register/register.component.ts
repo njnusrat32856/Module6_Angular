@@ -20,10 +20,14 @@ export class RegisterComponent {
     private builder: FormBuilder
   ) {
     this.regForm = this.builder.group({
-      userName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(9)]],
+
+      firstName: [''],
+      lastName: [''],
+      gender: [''],
+      email: [''],
+      password: [''],
       role: ['user']
+      
     });
     // this.loginForm = this.builder.group({
     //   email: [''],
@@ -34,11 +38,12 @@ export class RegisterComponent {
   onSubmit(): void {
     if (this.regForm.valid) {
       const user: UserModel = this.regForm.value;
-      this.userService. registration(user).subscribe({
+      this.userService.registration(user).subscribe({
         next: res => {
           alert('User Registered Successfully');
           console.log('User Registered Successfully: ', res);
           this.userService.storeToken(res.token);
+          const role = this.userService.getUserRole();
           this.router.navigate(['/login']);
         },
         error: err => {
@@ -48,27 +53,8 @@ export class RegisterComponent {
       });
     }
     else {
-      alert('Complte mandatory Field');
+      alert('Complete mandatory Field');
     }
   }
-
-  // onLoinSubmit(): void {
-    
-  //   if (this.loginForm.valid) {
-  //     const credentials = this.loginForm.value;
-  //     this.userService.login(credentials).subscribe({
-  //       next: res => {
-  //         console.log('User Logged in Successfully:', res);
-
-  //         this.userService.storeToken(res.token);
-  //         const role = this.userService.getUserRole();
-  //         this.router.navigate(['profile']);
-  //       },
-  //       error: err => {
-  //         console.error('Error logging in:', err)
-  //       }
-  //     });
-  //   }
-  // }
 
 }

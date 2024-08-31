@@ -25,7 +25,7 @@ export class AccountService {
   }
 
   updateAccount(account: Account): Observable<Account> {
-    return this.http.put<Account>(`${this.baseUrl}/${account.aid}`, account);
+    return this.http.put<Account>(`${this.baseUrl}/${account.id}`, account);
   }
 
   deleteAccount(aid: string): Observable<void> {
@@ -43,8 +43,8 @@ export class AccountService {
     return result;
   }
 
-  getAccountsByUser(userId: string): Observable<Account[]> {
-    return this.http.get<Account[]>(`${this.baseUrl}?userId=${userId}`);
+  getAccountsByUser(id: string): Observable<Account[]> {
+    return this.http.get<Account[]>(`${this.baseUrl}?userId=${id}`);
   }
   // getAccountsByUser(userId: string): Observable<Account> {
   //   return this.http.get<Account>(`${this.baseUrl}/${userId}`);

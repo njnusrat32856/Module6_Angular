@@ -1,10 +1,9 @@
 export class Account {
 
+    id!: string;
     aid!: string;
     accountNumber!: string;
-    firstName!: string;
-    lastName!: string;
-    gender!: string;
+    userName! : string;
     email!: string;
     address!: string;
     cell!: string;

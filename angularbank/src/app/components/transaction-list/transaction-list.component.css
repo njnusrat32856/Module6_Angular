@@ -1,6 +1,6 @@
 .transaction-list-container {
     padding: 20px;
-    background-color: #e7f3ff;
+    background-color: #e7f9ff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
@@ -48,11 +48,11 @@
   }
   
   .transaction-table .Deposit {
-    color: #009e25;
+    color: #008a20;
   }
   
   .transaction-table .Withdraw {
-    color: #dc3545;
+    color: #e41b2f;
   }
   
   .transaction-table .Transfer {

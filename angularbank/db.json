@@ -2,72 +2,63 @@
   "users": [
     {
       "id": "1",
-      "userName": "Nusrat Jahan",
+      "firstName": "Nusrat",
+      "lastName": "Jahan",
+      "gender": "Female",
       "email": "nusrat@gmail.com",
       "password": "12345",
       "role": "user"
     },
     {
       "id": "2",
-      "userName": "Jane Smith",
-      "email": "jane@example.com",
+      "firstName": "Naomi",
+      "lastName": "Nisha",
+      "gender": "Female",
+      "email": "nisha@gmail.com",
       "password": "56789",
       "role": "admin"
+    },
+    {
+      "id": "bf84",
+      "firstName": "Kamrul",
+      "lastName": "Islam",
+      "gender": "Male",
+      "email": "kamrul@gmail.com",
+      "password": "12345",
+      "role": "user"
     }
   ],
   "accounts": [
     {
-      "id": "3bd1",
+      "id": "1",
       "accountNumber": "9971002216",
-      "firstName": "Nusrat",
-      "lastName": "Jahan",
+      "userName": "Nusrat Jahan",
       "email": "nusrat@gmail.com",
+      "address": "Mirpur, Dhaka",
       "cell": "1234555",
       "nid": "432423",
       "accountType": "Savings",
-      "currentBalence": 10000,
+      "currentBalance": 51000,
       "creatingDate": "2024-07-29",
       "status": true
     },
     {
       "id": "e738",
-      "aid": "lurpi1vps",
       "accountNumber": "9E7P2B0F3",
-      "firstName": "Jobeda",
-      "lastName": "Khanom",
-      "gender": "Female",
+      "userName": "Jobeda Khanom",
       "email": "jobeda@gmail.com",
       "address": "MIrpur, Dhaka",
       "cell": "1234555",
       "nid": "432423",
       "accountType": "Savings",
-      "currentBalance": 0,
+      "currentBalance": 10000,
       "creatingDate": "2024-08-26T13:20:59.773Z",
-      "status": true
-    },
-    {
-      "id": "fca0",
-      "aid": "aerv97cyq",
-      "accountNumber": "3227974707",
-      "firstName": "Nusrat",
-      "lastName": "Jahan",
-      "gender": "Female",
-      "email": "n.j.naima222@gmail.com",
-      "address": "mirpur",
-      "cell": "1234555",
-      "nid": "432423",
-      "accountType": "Savings",
-      "currentBalance": 0,
-      "creatingDate": "2024-08-26T13:30:25.929Z",
-      "status": true
+      "status": false
     },
     {
       "id": "520a",
-      "aid": "4szj7enh0",
       "accountNumber": "8522180383",
-      "firstName": "Mostofa",
-      "lastName": "Rezvi",
-      "gender": "Male",
+      "userName": "Mostofa Rezvi",
       "email": "rezvi@gmail.com",
       "address": "Azimpur",
       "cell": "01233124",
@@ -79,11 +70,8 @@
     },
     {
       "id": "6d33",
-      "aid": "w4qb840o0",
       "accountNumber": "1381171703",
-      "firstName": "Raju",
-      "lastName": "Ahmad",
-      "gender": "Male",
+      "userName": "Raju Ahmed",
       "email": "raju@gmail.com",
       "address": "Azimpur",
       "cell": "01355454543",
@@ -95,11 +83,8 @@
     },
     {
       "id": "fd9d",
-      "aid": "w5dsoq0g3",
       "accountNumber": "8084621244",
-      "firstName": "Md. Saiful",
-      "lastName": "Islam",
-      "gender": "Male",
+      "userName": "Md. Saiful Islam",
       "email": "saiful@gmail.com",
       "address": "mirpur",
       "cell": "01355454543",
@@ -107,6 +92,19 @@
       "accountType": "Current Account",
       "currentBalance": 0,
       "creatingDate": "2024-08-27T16:25:24.213Z",
+      "status": true
+    },
+    {
+      "id": "68ae",
+      "accountNumber": "3128620115",
+      "userName": "Kamrul Islam",
+      "email": "kamrul@gmail.com",
+      "address": "Mirpur",
+      "cell": "0184723435",
+      "nid": "245354",
+      "accountType": "Student Account",
+      "currentBalance": 0,
+      "creatingDate": "2024-08-31T10:47:02.835Z",
       "status": false
     }
   ],
@@ -225,9 +223,36 @@
       "tid": "7qvykt",
       "accountNumber": "9971002216",
       "type": "Withdraw",
-      "amount": -1000,
+      "amount": 1000,
       "date": "2024-08-30T18:21:43.172Z",
       "description": "Withdraw"
+    },
+    {
+      "id": "50f0",
+      "tid": "118vjy",
+      "accountNumber": "9971002216",
+      "type": "Deposit",
+      "amount": 5000,
+      "date": "2024-08-31T08:20:44.738Z",
+      "description": "Deposit"
+    },
+    {
+      "id": "d118",
+      "tid": "34snx3",
+      "accountNumber": "9971002216",
+      "type": "Withdraw",
+      "amount": 1000,
+      "date": "2024-08-31T08:24:19.569Z",
+      "description": "Withdraw"
+    },
+    {
+      "id": "6b70",
+      "accountNumber": "9971002216",
+      "type": "Transfer",
+      "amount": 1000,
+      "date": "2024-08-31T08:33:50.680Z",
+      "description": "Transfer to 3453465654",
+      "targetAccountNumber": "3453465654"
     }
   ],
   "loans": [

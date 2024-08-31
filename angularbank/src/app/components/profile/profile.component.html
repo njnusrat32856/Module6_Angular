@@ -18,13 +18,33 @@
 <!-- <app-footer></app-footer> -->
 
 <div class="container">
-    <h2>Welcome, {{ user.userName }}!</h2>
-    
-    <div *ngIf="user" class="user-details">
-        <p><strong>Email:</strong> {{ user.email }}</p>
-    </div>
-    
-    <div *ngIf="!user" class="loading-message">
-        <p>Loading user profile...</p>
-    </div>
+    <ng-container *ngIf="userRole === 'user'">
+        <h2>Welcome, {{ user.firstName }} {{ user.lastName }}!</h2>
+
+        <div *ngIf="user" class="user-details">
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Gender:</strong> {{ user.gender }}</p>
+
+            
+        </div>
+
+        <div *ngIf="!user" class="loading-message">
+            <p>Loading user profile...</p>
+        </div>
+    </ng-container>
+
+
+    <ng-container *ngIf="userRole === 'admin'">
+        <h2> {{ user.firstName }} {{ user.lastName }}!</h2>
+
+        <div *ngIf="user" class="user-details">
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Role:</strong> {{ user.role }}</p>
+        </div>
+
+        <div *ngIf="!user" class="loading-message">
+            <p>Loading user profile...</p>
+        </div>
+    </ng-container>
+
 </div>

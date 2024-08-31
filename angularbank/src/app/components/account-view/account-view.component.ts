@@ -10,7 +10,7 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './account-view.component.html',
   styleUrl: './account-view.component.css'
 })
-export class AccountViewComponent implements OnInit{
+export class AccountViewComponent implements OnInit {
 
   user!: UserModel | null;
   account!: Account | null;
@@ -19,7 +19,7 @@ export class AccountViewComponent implements OnInit{
     private authService: AuthService,
     private router: Router,
     private accountService: AccountService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.user = this.authService.currentUserValue;
@@ -30,9 +30,9 @@ export class AccountViewComponent implements OnInit{
 
   loadUserAccount(userId: string): void {
     this.accountService.getAccountsByUser(userId).subscribe({
-      next:(accounts) => {
+      next: (accounts) => {
         if (accounts && accounts.length > 0) {
-          this.account = accounts[0];  // Assuming the user has only one account
+          this.account = accounts[0]; 
         } else {
           this.account = null;
         }
@@ -41,7 +41,7 @@ export class AccountViewComponent implements OnInit{
         console.error('Failed to load account', error);
         this.account = null;
       }
-  });
+    });
   }
 
   // accounts: Account[] = [];
@@ -64,10 +64,10 @@ export class AccountViewComponent implements OnInit{
   //   });
   // }
 
-  
+
 
   viewTransactions(accountNumber: string): void {
     this.router.navigate(['/transHistory', accountNumber]);
   }
-  
+
 }

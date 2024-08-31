@@ -11,8 +11,10 @@ import { AccountService } from '../../services/account.service';
 })
 export class ProfileComponent {
 
+  userRole: string | null = '';
   user!: UserModel;
   account !: Account;
+  accounts: Account[] = [];
 
   constructor(
     private profileService: ProfileService,
@@ -21,6 +23,7 @@ export class ProfileComponent {
 
   ngOnInit(): void {
     this.loadUserProfile();
+    this.loadAccountDetails();
   }
 
   loadUserProfile(): void {
@@ -28,6 +31,7 @@ export class ProfileComponent {
       next: user => {
         if (user) {
           this.user = user;
+          this.userRole = user?.role || null;
           
         }
       },
@@ -36,11 +40,11 @@ export class ProfileComponent {
       }
     });
   }
-  loadAccountDetails(accountNumber: string): void {
-    this.accountService.getAccountById(accountNumber).subscribe(
+  loadAccountDetails(): void {
+    this.accountService.getAccounts().subscribe(
       data => {
         if (data) {
-          this.account = data;
+          this.accounts = data;
         }
       }
     )

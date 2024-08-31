@@ -42,7 +42,7 @@ export class TransactionService {
       tid: this.generateUniqueId(),
       accountNumber,
       type: 'Withdraw',
-      amount: -amount,
+      amount: amount,
       date: new Date(),
       description: 'Withdraw'
     };
