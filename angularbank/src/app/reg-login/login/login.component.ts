@@ -37,7 +37,7 @@ export class LoginComponent {
 
           this.userService.storeToken(res.token);
           const role = this.userService.getUserRole();
-          this.router.navigate(['viewaccounts']);
+          this.router.navigate(['profile']);
         },
         error: err => {
           console.error('Error logging in:', err)
