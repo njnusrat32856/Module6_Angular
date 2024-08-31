@@ -42,19 +42,7 @@
       "creatingDate": "2024-07-29",
       "status": true
     },
-    {
-      "id": "e738",
-      "accountNumber": "9E7P2B0F3",
-      "userName": "Jobeda Khanom",
-      "email": "jobeda@gmail.com",
-      "address": "MIrpur, Dhaka",
-      "cell": "1234555",
-      "nid": "432423",
-      "accountType": "Savings",
-      "currentBalance": 10000,
-      "creatingDate": "2024-08-26T13:20:59.773Z",
-      "status": false
-    },
+    
     {
       "id": "520a",
       "accountNumber": "8522180383",
