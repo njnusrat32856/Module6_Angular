@@ -43,7 +43,7 @@ export class RegisterComponent {
           alert('User Registered Successfully');
           console.log('User Registered Successfully: ', res);
           this.userService.storeToken(res.token);
-          const role = this.userService.getUserRole();
+          // const role = this.userService.getUserRole();
           this.router.navigate(['/login']);
         },
         error: err => {

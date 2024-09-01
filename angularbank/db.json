@@ -26,6 +26,15 @@
       "email": "kamrul@gmail.com",
       "password": "12345",
       "role": "user"
+    },
+    {
+      "id": "ec07",
+      "firstName": "Saiful",
+      "lastName": "Islam",
+      "gender": "",
+      "email": "saiful@gmail.com",
+      "password": "12345",
+      "role": "user"
     }
   ],
   "accounts": [
@@ -42,7 +51,6 @@
       "creatingDate": "2024-07-29",
       "status": true
     },
-    
     {
       "id": "520a",
       "accountNumber": "8522180383",
