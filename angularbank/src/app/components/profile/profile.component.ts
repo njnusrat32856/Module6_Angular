@@ -3,6 +3,7 @@ import { UserModel } from '../../model/user.model';
 import { ProfileService } from '../../services/profile.service';
 import { Account } from '../../model/account.model';
 import { AccountService } from '../../services/account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -18,7 +19,8 @@ export class ProfileComponent {
 
   constructor(
     private profileService: ProfileService,
-    private accountService: AccountService
+    private accountService: AccountService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -48,5 +50,8 @@ export class ProfileComponent {
         }
       }
     )
+  }
+  viewTransactions(accountNumber: string): void {
+    this.router.navigate(['/transHistory', accountNumber]);
   }
 }

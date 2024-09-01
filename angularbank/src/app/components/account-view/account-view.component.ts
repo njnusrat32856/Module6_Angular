@@ -77,25 +77,7 @@ export class AccountViewComponent implements OnInit {
     }
   }
 
-  // accounts: Account[] = [];
-
-  // constructor(
-  //   private accountService: AccountService,
-  //   private router: Router
-  // ) {}
-
-  // ngOnInit(): void {
-  //   this.loadAccounts();
-  //   // this.accountService.getAccounts().subscribe((data) => {
-  //   //   this.accounts = data;
-  //   // });
-  // }
-
-  // loadAccounts(): void {
-  //   this.accountService.getAccounts().subscribe((data: Account[]) => {
-  //     this.accounts = data;
-  //   });
-  // }
+  
 
 
 

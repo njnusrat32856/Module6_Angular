@@ -28,10 +28,10 @@
       "role": "user"
     },
     {
-      "id": "ec07",
+      "id": "7c7a",
       "firstName": "Saiful",
       "lastName": "Islam",
-      "gender": "",
+      "gender": "Male",
       "email": "saiful@gmail.com",
       "password": "12345",
       "role": "user"
@@ -88,7 +88,7 @@
       "accountType": "Current Account",
       "currentBalance": 0,
       "creatingDate": "2024-08-27T16:25:24.213Z",
-      "status": true
+      "status": false
     },
     {
       "id": "68ae",

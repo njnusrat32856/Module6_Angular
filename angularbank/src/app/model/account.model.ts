@@ -1,3 +1,5 @@
+import { UserModel } from "./user.model";
+
 export class Account {
 
     id!: string;
@@ -12,4 +14,5 @@ export class Account {
     currentBalance!: number;
     creatingDate!: Date;
     status!: boolean;
+    users!: UserModel;
 }
