@@ -107,6 +107,9 @@ export class AuthService {
       })
     )
   }
+  getAccountsByUser(id: string): Observable<UserModel[]> {
+    return this.http.get<UserModel[]>(`${this.baseUrl}?userId=${id}`);
+  }
 
   private clearCurrentUser(): void {
     if (this.isBrowser()) {

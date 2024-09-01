@@ -14,7 +14,7 @@
       "firstName": "Naomi",
       "lastName": "Nisha",
       "gender": "Female",
-      "email": "nisha@gmail.com",
+      "email": "admin@gmail.com",
       "password": "56789",
       "role": "admin"
     },
@@ -49,7 +49,16 @@
       "accountType": "Savings",
       "currentBalance": 0,
       "creatingDate": "2024-07-29",
-      "status": true
+      "status": true,
+      "users": {
+        "id": "1",
+        "firstName": "Nusrat",
+        "lastName": "Jahan",
+        "gender": "Female",
+        "email": "nusrat@gmail.com",
+        "password": "12345",
+        "role": "user"
+      }
     },
     {
       "id": "520a",
@@ -62,7 +71,8 @@
       "accountType": "Checking",
       "currentBalance": 0,
       "creatingDate": "2024-08-26T13:36:23.848Z",
-      "status": false
+      "status": true,
+      "users": {}
     },
     {
       "id": "6d33",
@@ -75,7 +85,8 @@
       "accountType": "Current Account",
       "currentBalance": 0,
       "creatingDate": "2024-08-26T17:48:46.858Z",
-      "status": false
+      "status": false,
+      "users": {}
     },
     {
       "id": "fd9d",
@@ -88,7 +99,16 @@
       "accountType": "Current Account",
       "currentBalance": 0,
       "creatingDate": "2024-08-27T16:25:24.213Z",
-      "status": false
+      "status": false,
+      "users": {
+        "id": "7c7a",
+        "firstName": "Saiful",
+        "lastName": "Islam",
+        "gender": "Male",
+        "email": "saiful@gmail.com",
+        "password": "12345",
+        "role": "user"
+      }
     },
     {
       "id": "68ae",
@@ -101,7 +121,16 @@
       "accountType": "Student Account",
       "currentBalance": 0,
       "creatingDate": "2024-08-31T10:47:02.835Z",
-      "status": false
+      "status": false,
+      "users": {
+        "id": "bf84",
+        "firstName": "Kamrul",
+        "lastName": "Islam",
+        "gender": "Male",
+        "email": "kamrul@gmail.com",
+        "password": "12345",
+        "role": "user"
+      }
     }
   ],
   "transactions": [

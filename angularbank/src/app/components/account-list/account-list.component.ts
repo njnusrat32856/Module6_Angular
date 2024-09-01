@@ -35,24 +35,14 @@ export class AccountListComponent implements OnInit {
     );
   }
 
-  // getStatusClass(status: boolean): string {
-  //   return status ? 'active' : 'inactive';
-  // }
-
-  // viewTransactions(accountNumber: string): void {
-  //   this.router.navigate(['/transHistory', accountNumber]);
-  // }
-  // approveAccount(account: Account): void {
-  //   account.status = true;
-  //   this.accountService.updateAccount(account).subscribe();
-  // }
+  
 
   approveAccount(account: Account): void {
-    account.status = true;  // Mark account as active
+    account.status = true;  
     this.accountService.updateAccount(account).subscribe({
       next: (updatedAccount) => {
         console.log('Account approved:', updatedAccount);
-        this.loadAccounts();  // Reload the accounts to reflect changes
+        this.loadAccounts();  
       },
       error: (error) => {
         console.error('Failed to approve account', error);

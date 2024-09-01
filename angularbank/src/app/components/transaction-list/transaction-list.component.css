@@ -1,6 +1,6 @@
 .transaction-list-container {
     padding: 20px;
-    background-color: #e7f9ff;
+    background-color: #effbff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
@@ -21,7 +21,7 @@
   }
   
   .transaction-table thead {
-    background-color: #3a99fe;
+    background-color: #67b0ff;
     color: #fff;
   }
   
