@@ -36,7 +36,7 @@ export class AccountViewComponent implements OnInit {
     this.accountService.getAccountsByUser(userId).subscribe({
       next: (accounts) => {
         if (accounts && accounts.length > 0) {
-          this.account = accounts[0];  // Assuming the user has only one account
+          this.account = accounts[0];  
           this.loadTransactionHistory(this.account.accountNumber);
         } else {
           this.account = null;

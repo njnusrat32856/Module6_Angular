@@ -85,7 +85,7 @@
       "accountType": "Current Account",
       "currentBalance": 0,
       "creatingDate": "2024-08-26T17:48:46.858Z",
-      "status": false,
+      "status": true,
       "users": {}
     },
     {
@@ -99,7 +99,7 @@
       "accountType": "Current Account",
       "currentBalance": 0,
       "creatingDate": "2024-08-27T16:25:24.213Z",
-      "status": false,
+      "status": true,
       "users": {
         "id": "7c7a",
         "firstName": "Saiful",
@@ -278,6 +278,60 @@
       "date": "2024-08-31T08:33:50.680Z",
       "description": "Transfer to 3453465654",
       "targetAccountNumber": "3453465654"
+    },
+    {
+      "id": "a52d",
+      "tid": "n8xitu",
+      "accountNumber": "3227974707",
+      "type": "Deposit",
+      "amount": 1000,
+      "date": "2024-09-02T09:55:07.085Z",
+      "description": "Deposit"
+    },
+    {
+      "id": "c6d6",
+      "tid": "3p038x",
+      "accountNumber": "9971002216",
+      "type": "Deposit",
+      "amount": 1000,
+      "date": "2024-09-02T09:55:28.564Z",
+      "description": "Deposit"
+    },
+    {
+      "id": "efc1",
+      "accountNumber": "9971002216",
+      "type": "Transfer",
+      "amount": 10000,
+      "date": "2024-09-02T09:56:38.982Z",
+      "description": "add",
+      "targetAccountNumber": "3453465654"
+    },
+    {
+      "id": "8535",
+      "tid": "c2u8c6",
+      "accountNumber": "9971002216",
+      "type": "Deposit",
+      "amount": 1000,
+      "date": "2024-09-02T10:33:08.698Z",
+      "description": "Deposit"
+    },
+    {
+      "id": "ea08",
+      "tid": "ok7z9r",
+      "accountNumber": "9971002216",
+      "type": "Withdraw",
+      "amount": 1000,
+      "date": "2024-09-02T10:33:57.858Z",
+      "description": "Withdraw"
+    },
+    {
+      "id": "e433",
+      "accountNumber": "9971002216",
+      "type": "Transfer",
+      "amount": 1000,
+      "date": "2024-09-02T10:34:02.890Z",
+      "description": "Transfer to 3453465654",
+      "targetAccountNumber": "3453465654"
     }
   ],
   "loans": [
@@ -290,7 +344,7 @@
       "startDate": "2020-08-26T17:03:15.215Z",
       "endDate": "2028-09-01T00:00:00Z",
       "monthlyPayment": 932.13,
-      "balanceRemaining": 47000,
+      "balanceRemaining": 45000,
       "status": "Active"
     },
     {
