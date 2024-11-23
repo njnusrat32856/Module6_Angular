@@ -7,13 +7,17 @@ import { FooterComponent } from './others/footer/footer.component';
 import { HeaderComponent } from './others/header/header.component';
 import { SidebarComponent } from './others/sidebar/sidebar.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { LoginComponent } from './register-login/login/login.component';
+import { RegistrationComponent } from './register-login/registration/registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
