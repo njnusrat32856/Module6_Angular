@@ -35,8 +35,10 @@
                 "glob": "**/*",
                 "input": "public"
               },
+              "src/assets/**",
+              "src/assets/img/**",
               "src/assets/img/favicon.png",
-              "src/assets/img/**"
+              "src/assets/img/messages1.jpg"
             ],
             "styles": [
               "src/styles.css",
