@@ -10,6 +10,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { LoginComponent } from './register-login/login/login.component';
 import { RegistrationComponent } from './register-login/registration/registration.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
