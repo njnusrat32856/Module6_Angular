@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class AccountService {
 
-  private baseUrl = '/api/accounts';
+  private baseUrl = 'http://localhost:8040/api/accounts';
 
   constructor(private http: HttpClient) {}
 
   getAllAccounts(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
+    return this.http.get(`${this.baseUrl}/`);
   }
 
   getAccountById(id: number): Observable<any> {
@@ -24,7 +24,7 @@ export class AccountService {
   }
 
   createAccount(account: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}`, account);
+    return this.http.post(`${this.baseUrl}/create`, account);
   }
 
   updateAccountBalance(id: number, balance: number): Observable<any> {
