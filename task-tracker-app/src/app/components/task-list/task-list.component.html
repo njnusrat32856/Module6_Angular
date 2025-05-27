@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Task List</h2>
+    <a mat-raised-button color="primary" routerLink="/add">Add Task</a>
+  </div>
+
+  <div class="mb-3">
+    <mat-button-toggle-group [(ngModel)]="filter" (change)="applyFilter()" appearance="legacy">
+      <mat-button-toggle value="all">All</mat-button-toggle>
+      <mat-button-toggle value="completed">Completed</mat-button-toggle>
+      <mat-button-toggle value="pending">Pending</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <mat-card *ngFor="let task of filteredTasks" class="mb-2">
+    <mat-card-content class="d-flex justify-content-between align-items-center">
+      <div>
+        <mat-checkbox [checked]="task.completed" (change)="toggleComplete(task)">
+          <span [ngClass]="{'text-decoration-line-through': task.completed}">
+            {{ task.title }}
+          </span>
+        </mat-checkbox>
+        <p class="text-muted mb-0">{{ task.description }}</p>
+      </div>
+      <div>
+        <button mat-icon-button color="primary" (click)="viewDetails(task.id)">
+          <mat-icon>visibility</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" (click)="editTask(task.id)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteTask(task.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

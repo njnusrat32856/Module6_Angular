@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <mat-card class="task-details-card">
+    <mat-card-title>Task Details</mat-card-title>
+    <mat-card-content>
+      <h3>{{ task?.title }}</h3>
+      <p>{{ task?.description }}</p>
+      <p>Status: 
+        <span [ngClass]="{'text-success': task?.completed === true, 'text-danger': task?.completed === false}">
+          {{ task?.completed ? 'Completed' : 'Pending' }}
+        </span>
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="router.navigate(['/tasks'])">
+        Back to List
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
